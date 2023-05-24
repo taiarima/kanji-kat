@@ -1,0 +1,405 @@
+:root {
+  --color-dark: #f3d57c;
+  --color-medium: #f81212;
+  --color-bright: #f81212;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  background-color: var(--color-dark);
+  color: #171515;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+main {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 50px;
+  width: 100%;
+}
+
+nav {
+  background-color: var(--color-bright);
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 20px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  justify-content: flex-end;
+}
+
+.logo img {
+  position: absolute;
+  top: 0;
+  height: 120px;
+  margin-right: 20px;
+  border-radius: 50%;
+  left: 0;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 60px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.nav-links a:hover {
+  color: rgb(201, 201, 170);
+}
+
+.title {
+  font-size: 2rem;
+  position: absolute;
+  left: 170px;
+  color: #fff;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  text-align: center;
+}
+
+.meaning-choices {
+  display: flex;
+  flex: auto;
+  flex-wrap: wrap;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.kanji-prompt {
+  width: 300px;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: none;
+  background-color: var(--color-medium);
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 14rem;
+  resize: none;
+  text-align: center;
+  touch-action: none;
+  pointer-events: none;
+}
+
+.kanji-prompt::-webkit-scrollbar {
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+button {
+  background-color: var(--color-bright);
+  color: #fff;
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #34db63;
+}
+
+/* Styles for the button that replaces navbar links on smaller screens */
+.menu-toggle {
+  display: none;
+}
+
+.skill-levels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-levels ul {
+  margin-top: -20px;
+}
+
+/* The Modal (background) */
+.modal-window {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  align-items: center;
+}
+
+.skill-levels {
+  text-align: center;
+}
+
+.skill-levels ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.char-nums {
+  float: left;
+  padding-right: 10px;
+}
+
+.level {
+  float: right;
+  padding-left: 10px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+  color: black;
+}
+
+.modal-content h1 {
+  text-align: center;
+}
+
+.modal-content p {
+  text-align: justify;
+}
+
+/* Close Button */
+.close-modal-btn {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close-modal-btn:hover,
+.close-modal-btn:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.abandon-modal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.abandon-btn {
+  background-color: red;
+}
+
+.choose-list-text label {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.begin-button {
+  display: inline-block;
+}
+
+.disabled-button {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.disabled-choice {
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
+.intro-text {
+  top: 100px;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  padding-bottom: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.intro-title {
+  margin-bottom: -10px;
+}
+
+.intro-paragraph {
+  text-align: justify;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: var(--color-medium);
+}
+
+.choice-activated {
+  background-color: limegreen;
+  border: 2px solid blue;
+}
+
+.incorrect-style {
+  background-color: rgb(213, 32, 32);
+  border: 2px solid whitesmoke;
+}
+
+.correct-style {
+  background-color: rgb(89, 159, 89);
+  border: 5px solid limegreen;
+}
+
+.results {
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  text-align: center;
+  padding-bottom: 100px;
+  left: 0;
+  right: 0;
+}
+
+.submit-answer {
+  background-color: #618954;
+}
+
+.incorrect-kanji {
+  background-color: #123805;
+  color: #f1f1f1;
+  font-size: large;
+  font-family: Helvetica, sans-serif;
+  width: 300px;
+  height: 500px;
+}
+
+/* Dropdown Button */
+.drop-btn {
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  margin-right: 35px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  /* position: relative;
+  display: inline-block; */
+  display: none;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 38%;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .drop-btn {
+  background-color: #3e8e41;
+}
+
+.hamburger-button {
+  height: 30px;
+  width: 30px;
+  filter: invert(100%);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 1100px) {
+  .nav-links {
+    display: none;
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+}
+
+@media (max-width: 730px) {
+  .title {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 490px) {
+  .title {
+    font-size: 0.5rem;
+  }
+}
+
+@media (max-width: 370px) {
+  .title {
+    display: none;
+  }
+}
