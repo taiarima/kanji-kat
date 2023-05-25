@@ -137,7 +137,7 @@ function trimReading(reading) {
     }
   }
 
-  const result = [...onyomi, ...kunyomi].join("; ");
+  const result = [...onyomi, ...kunyomi].join("；　");
   return result;
 }
 
