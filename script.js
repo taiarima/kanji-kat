@@ -23,7 +23,7 @@ const meanPrompt = document.querySelector(".mean-prompt");
 const ansPrompt = document.querySelector(".ans-prompt");
 const resultString = document.querySelector(".result-string");
 const resultsContainer = document.querySelector(".results");
-const incorrectkanjiTextArea = document.querySelector(".incorrect-kanji");
+const incorrectKanjiTextArea = document.querySelector(".incorrect-kanji");
 const abandonTestBtn = document.querySelector(".abandon-btn");
 const continueTestBtn = document.querySelector(".continue-btn");
 const chooseListDropdown = document.querySelector(".list-dropdown");
@@ -36,7 +36,7 @@ const dropdownToggle = document.querySelector(".menu-toggle");
 let testInProgress = false;
 
 // The user must select the reading and meaning which match this kanji object
-let currentCorrectkanji;
+let currentCorrectKanji;
 
 // These variables will be used in the calculateRange function, initialized in initailizeTest function
 let highestCorrectkanji;
@@ -51,6 +51,7 @@ let correctAnswer;
 let triesUntilTestOver;
 let correctAnswers;
 let incorrectAnswers;
+let honingRangeBool;
 
 function generatePrompt() {
   // Reset the GUI
@@ -67,7 +68,7 @@ function generatePrompt() {
     let nextkanji;
     // This do:while loop should prevent us from seeing any kanji twice in the same test
     do {
-      nextkanji = generateRandomkanji();
+      nextkanji = generateRandomKanji();
     } while (
       incorrectAnswers.includes(kanjiList.indexOf(nextkanji)) ||
       correctAnswers.includes(kanjiList.indexOf(nextkanji)) ||
@@ -94,7 +95,10 @@ function generatePrompt() {
   const correctkanji =
     kanjiArray[Math.floor(Math.random() * kanjiArray.length)];
   kanjiPrompt.textContent = correctkanji.kanji;
-  currentCorrectkanji = correctkanji;
+  currentCorrectKanji = correctkanji;
+
+  // FOR TESTING PURPOSES REMOVE LATER
+  console.log(kanjiList.indexOf(currentCorrectKanji));
 }
 
 function shuffleArray(array) {
@@ -146,7 +150,7 @@ function containsHiragana(word) {
   return hiraganaRegex.test(word);
 }
 
-function generateRandomkanji() {
+function generateRandomKanji() {
   const randomNum = Math.round(Math.random() * (max - min)) + min;
   return kanjiList[randomNum];
 }
@@ -154,8 +158,9 @@ function generateRandomkanji() {
 // Keeps track of incorrect and correct answers and calculates a new range based on these
 function calculateRange() {
   totalAnswers++;
+
   // Update value based on whether user answered correctly
-  const currentkanjiIndex = kanjiList.indexOf(currentCorrectkanji);
+  const currentkanjiIndex = kanjiList.indexOf(currentCorrectKanji);
   if (correctAnswer) {
     highestCorrectkanji = Math.max(currentkanjiIndex, highestCorrectkanji);
     currentStreak = currentStreak > 0 ? ++currentStreak : 1;
@@ -166,12 +171,19 @@ function calculateRange() {
     currentStreak = currentStreak < 0 ? --currentStreak : -1;
     incorrectAnswersThisRound++;
     incorrectAnswers.push(currentkanjiIndex);
+    if (!honingRangeBool) {
+      honingRangeBool = true;
+      min = Math.max(kanjiList.indexOf(currentCorrectKanji) - 25, 0);
+      max = kanjiList.indexOf(currentCorrectKanji) + 25;
+    }
   }
+
+  // For Debugging purposes
   console.log(
     `totalAnswers = ${totalAnswers}\n currentStreak = ${currentStreak}\n min = ${min}\n max = ${max}`
   );
 
-  // If user has gone through 100 kanji, the test is over
+  // If user has gone through 50 kanji, the test is over
   if (totalAnswers >= triesUntilTestOver) {
     if (incorrectAnswers.length === 0) {
       triesUntilTestOver += 10;
@@ -182,47 +194,84 @@ function calculateRange() {
   }
 
   // Otherwise, determine new top and bottom if necessary according to user's current performance
-  else if (
-    Math.abs(currentStreak) >= 5 ||
-    correctAnswersThisRound + incorrectAnswersThisRound >= 15
-  ) {
-    if (currentStreak >= 5) {
-      // Set new bottom, push top up
-      min = highestCorrectkanji;
-      max = Math.min(max + 650, kanjiList.length);
-    } else if (currentStreak <= -5) {
-      // Set new top, push bottom down
-      max = Math.max(highestCorrectkanji - 100, 50);
-      min = min / 2;
-    } else if (correctAnswersThisRound + incorrectAnswersThisRound >= 10) {
-      // Adjust top and bottom accordingly
-      if (highestCorrectkanji > lowestIncorrectkanji) {
-        min = highestCorrectkanji;
-        max = Math.min(max + 250, kanjiList.length);
-      } else {
-        max = highestCorrectkanji;
-        min = lowestIncorrectkanji;
-      }
-    }
-    if (min >= max || max - min < 50) {
-      // This will give the user a perfect score if they deserve it
-      if (min > 5900 && incorrectAnswers.length === 0) {
-        min = 6300;
-        max = 6300;
-        generateResults();
-        return;
-      }
-      min = Math.max(0, max - 250);
-    }
+  // Only if the user has a current streak of abs(5) or 15 total answers this round
 
-    if (incorrectAnswers.length >= 15 && correctAnswers.length === 0) {
+  // Condition 1 -- The user is on a positive streak so they probably know all the kanji in the range
+  // This allows the range to quickly shoot up as long as the user consistently answers correctly
+  if (currentStreak >= 5 && !honingRangeBool) {
+    // Set new bottom, push top up
+    min = highestCorrectkanji;
+    max = Math.min(max + 650, kanjiList.length);
+    endCalcRangeRound();
+  }
+  // Condition 2 -- The user is on a negative streak, so they might need the range bumped down otherwise they'll terminate early
+  else if (currentStreak <= -5) {
+    // Set new top, push bottom down
+    max = highestCorrectkanji + 50;
+    min = highestCorrectkanji;
+    honingRangeBool = false;
+    endCalcRangeRound();
+  }
+
+  // Condition 3 -- The user isn't on any streaks, but they've answered 15 prompts this round
+  else if (correctAnswersThisRound + incorrectAnswersThisRound >= 15) {
+    // If the user got at least 10 out of 15 correct, they can keep playing
+    if (correctAnswersThisRound >= 10) {
+      min = highestCorrectkanji;
+      max = Math.min(max + 100, kanjiList.length);
+      honingRangeBool = false;
+      endCalcRangeRound();
+    }
+    // Otherwise we assume we have narrowed in on the user's proper level
+    else {
+      if (highestCorrectkanji < max) {
+        min = highestCorrectkanji;
+      }
+      if (lowestIncorrectkanji > highestCorrectkanji) {
+        max = lowestIncorrectkanji;
+      }
       generateResults();
       return;
     }
-    currentStreak = 0;
-    incorrectAnswersThisRound = 0;
-    correctAnswersThisRound = 0;
   }
+
+  // If, in calculating the new range, the min has dropped below the max or the range has gone too small
+  if (min >= max || max - min < 50) {
+    min = Math.max(0, max - 50);
+  }
+
+  // Special end game conditions
+  // Perfect score
+  if (min > 6000 && incorrectAnswers.length === 0) {
+    min = 6300;
+    max = 6300;
+    generateResults();
+    return;
+  }
+  // User doesn't know enough kanji to calculate a score
+  if (incorrectAnswers.length >= 15 && correctAnswers.length === 0) {
+    generateResults();
+    return;
+  }
+}
+
+function testValue(maxKanjiKnown) {
+  initializeTest();
+  while (testInProgress) {
+    currentCorrectKanji = generateRandomKanji();
+    if (kanjiList.indexOf(currentCorrectKanji) <= maxKanjiKnown) {
+      correctAnswer = true;
+    } else {
+      correctAnswer = false;
+    }
+    calculateRange();
+  }
+}
+
+function endCalcRangeRound() {
+  currentStreak = 0;
+  incorrectAnswersThisRound = 0;
+  correctAnswersThisRound = 0;
 }
 
 function initializeTest() {
@@ -230,6 +279,18 @@ function initializeTest() {
   introText.classList.add("hidden");
   appContainer.classList.remove("hidden");
   modalChooseList.style.display = "none";
+  resultsContainer.classList.add("hidden");
+  pronChoiceList.forEach((ele) => {
+    ele.classList.remove("incorrect-style");
+    ele.classList.remove("correct-style");
+    ele.classList.remove("disabled-choice");
+  });
+  meaningChoiceList.forEach((ele) => {
+    ele.classList.remove("incorrect-style");
+    ele.classList.remove("correct-style");
+    ele.classList.remove("disabled-choice");
+  });
+  window.scrollTo(0, 0);
 
   // Initialize variables for new test
   highestCorrectkanji = 0;
@@ -239,11 +300,12 @@ function initializeTest() {
   correctAnswersThisRound = 0;
   incorrectAnswersThisRound = 0;
   min = 0;
-  max = 500;
+  max = 300;
   correctAnswer = false;
-  triesUntilTestOver = 50;
+  triesUntilTestOver = 60;
   correctAnswers = [];
   incorrectAnswers = [];
+  honingRangeBool = false;
 
   testInProgress = true;
   generatePrompt();
@@ -263,17 +325,17 @@ function generateResults() {
   }
 
   if (incorrectAnswers.length > 0) {
-    incorrectkanjiTextArea.value = "Kanji you answered incorrectly:\n";
+    incorrectKanjiTextArea.value = "Kanji you answered incorrectly:\n";
     incorrectAnswers.forEach((kanjiNum, idx) => {
       currkanji = kanjiList[kanjiNum];
-      incorrectkanjiTextArea.value += `\n${idx + 1}. ${
+      incorrectKanjiTextArea.value += `\n${idx + 1}. ${
         currkanji.kanji
       } : ${trimReading(currkanji.kana)} -- ${trimMeaning(
         currkanji.english
       )}\n`;
     });
   } else {
-    incorrectkanjiTextArea.value =
+    incorrectKanjiTextArea.value =
       "You answered every question correctly! You're a kanji no kami-sama! 💯😮🎉\n";
   }
   // TODO: Add an SNS sharing thing
@@ -443,12 +505,12 @@ submitAnswerBtn.addEventListener("click", function () {
     pronPrompt.textContent = 'You submitted "I don\'t know" for this kanji.';
     meanPrompt.textContent = "";
     pronChoiceList.forEach((ele) => {
-      if (ele.textContent === trimReading(currentCorrectkanji.kana)) {
+      if (ele.textContent === trimReading(currentCorrectKanji.kana)) {
         ele.classList.add("correct-style");
       }
     });
     meaningChoiceList.forEach((ele) => {
-      if (ele.textContent === trimMeaning(currentCorrectkanji.english)) {
+      if (ele.textContent === trimMeaning(currentCorrectKanji.english)) {
         ele.classList.add("correct-style");
       }
     });
@@ -464,28 +526,28 @@ submitAnswerBtn.addEventListener("click", function () {
     );
 
     // Check reading for correctness
-    if (trimReading(currentCorrectkanji.kana) == pronSelection.textContent) {
+    if (trimReading(currentCorrectKanji.kana) == pronSelection.textContent) {
       pronPrompt.textContent = "Reading: Correct";
       pronSelection.classList.add("correct-style");
     } else {
       pronPrompt.textContent = "Reading: Incorrect";
       pronSelection.classList.add("incorrect-style");
       pronChoiceList.forEach((ele) => {
-        if (ele.textContent === trimReading(currentCorrectkanji.kana)) {
+        if (ele.textContent === trimReading(currentCorrectKanji.kana)) {
           ele.classList.add("correct-style");
         }
       });
     }
 
     // Check meaning for correctness
-    if (trimMeaning(currentCorrectkanji.english) == meanSelection.textContent) {
+    if (trimMeaning(currentCorrectKanji.english) == meanSelection.textContent) {
       meanPrompt.textContent = "Definition: Correct";
       meanSelection.classList.add("correct-style");
     } else {
       meanPrompt.textContent = "Definition: Incorrect";
       meanSelection.classList.add("incorrect-style");
       meaningChoiceList.forEach((ele) => {
-        if (ele.textContent === trimMeaning(currentCorrectkanji.english)) {
+        if (ele.textContent === trimMeaning(currentCorrectKanji.english)) {
           ele.classList.add("correct-style");
         }
       });
@@ -494,8 +556,8 @@ submitAnswerBtn.addEventListener("click", function () {
     // Evaluates total answer for correctness.
     // Answers are only correct if user selected correct reading and meaning
     if (
-      trimReading(currentCorrectkanji.kana) == pronSelection.textContent &&
-      trimMeaning(currentCorrectkanji.english) == meanSelection.textContent
+      trimReading(currentCorrectKanji.kana) == pronSelection.textContent &&
+      trimMeaning(currentCorrectKanji.english) == meanSelection.textContent
     ) {
       correctAnswer = true;
     } else {
