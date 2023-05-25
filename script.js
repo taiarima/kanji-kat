@@ -75,7 +75,8 @@ function generatePrompt() {
       nextkanji = generateRandomkanji();
     } while (
       incorrectAnswers.includes(kanjiList.indexOf(nextkanji)) ||
-      correctAnswers.includes(kanjiList.indexOf(nextkanji)) || kanjiArray.includes(nextkanji)
+      correctAnswers.includes(kanjiList.indexOf(nextkanji)) ||
+      kanjiArray.includes(nextkanji)
     );
     kanjiArray.push(nextkanji);
   }
@@ -123,6 +124,33 @@ function trimMeaning(meaning) {
 
   // If the second semicolon is not found, return the original string
   return meaning;
+}
+
+function trimReading(reading) {
+  const words = reading.split("    ");
+
+  let onyomi = [];
+  let kunyomi = [];
+
+  for (const word of words) {
+    if (onyomi.length < 2 && !containsHiragana(word)) {
+      onyomi.push(word);
+    } else if (kunyomi.length < 2 && containsHiragana(word)) {
+      kunyomi.push(word);
+    }
+
+    if (onyomi.length === 2 && kunyomi.length === 2) {
+      break; 
+    }
+  }
+
+  const result = [...onyomi, ...kunyomi].join("; ");
+  return result;
+}
+
+function containsHiragana(word) {
+  const hiraganaRegex = /[\u3040-\u309F]/; // Range of Hiragana characters in Unicode
+  return hiraganaRegex.test(word);
 }
 
 function generateRandomkanji() {
