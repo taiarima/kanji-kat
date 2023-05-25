@@ -18,8 +18,6 @@ const pronChoiceList = document.querySelectorAll(".pron-choice");
 const meaningChoiceList = document.querySelectorAll(".mean-choice");
 const submitAnswerBtn = document.querySelector(".submit-answer");
 const beginTestBtn = document.querySelector(".begin-button");
-const simpBtn = document.querySelector(".simplified-btn");
-const tradBtn = document.querySelector(".traditional-btn");
 const pronPrompt = document.querySelector(".pron-prompt");
 const meanPrompt = document.querySelector(".mean-prompt");
 const ansPrompt = document.querySelector(".ans-prompt");
@@ -37,10 +35,7 @@ const dropdownToggle = document.querySelector(".menu-toggle");
 // Boolean to see if user is currently taking a test
 let testInProgress = false;
 
-// This value will be set by the user when they begin the test to determine whether they are presented simplified or traditional characters
-let simplifiedCharset = true;
-
-// The user must select the pronunciation and meaning which match this kanji object
+// The user must select the reading and meaning which match this kanji object
 let currentCorrectkanji;
 
 // These variables will be used in the calculateRange function, initialized in initailizeTest function
@@ -60,7 +55,7 @@ let incorrectAnswers;
 function generatePrompt() {
   // Reset the GUI
   ansPrompt.textContent = "Confirm Answer.";
-  pronPrompt.textContent = "Select the correct pronunciation:";
+  pronPrompt.textContent = "Select the correct reading:";
   meanPrompt.textContent = "Select the correct definition:";
   submitAnswerBtn.textContent = "I don't know this kanji";
   pronChoiceList.forEach((btn) => btn.classList.remove("choice-activated"));
@@ -81,26 +76,24 @@ function generatePrompt() {
     kanjiArray.push(nextkanji);
   }
 
-  // Fill up the pronunciation choices
+  // Fill up the reading choices
   kanjiArray.forEach(
-    (kanji, i) => (pronChoiceList[i].textContent = kanji.pronunciation)
+    (kanji, i) => (pronChoiceList[i].textContent = trimReading(kanji.kana))
   );
 
-  // Shuffle the array so that the meaning and pronunciations are not in the same columns
+  // Shuffle the array so that the meaning and readings are not in the same columns
   shuffleArray(kanjiArray);
 
   // Fill up the meaning choices
   kanjiArray.forEach(
     (kanji, i) =>
-      (meaningChoiceList[i].textContent = trimMeaning(kanji.meaning))
+      (meaningChoiceList[i].textContent = trimMeaning(kanji.english))
   );
 
   // Choose one of the kanji to be the correct answer
   const correctkanji =
     kanjiArray[Math.floor(Math.random() * kanjiArray.length)];
-  kanjiPrompt.textContent = simplifiedCharset
-    ? correctkanji.simplified
-    : correctkanji.traditional;
+  kanjiPrompt.textContent = correctkanji.kanji;
   currentCorrectkanji = correctkanji;
 }
 
@@ -114,7 +107,7 @@ function shuffleArray(array) {
 // For meanings that are too long, delete all content after second semi-colon
 function trimMeaning(meaning) {
   // Find the index of the second semicolon
-  const secondSemicolonIndex = meaning.indexOf(";", meaning.indexOf(";") + 1);
+  const secondSemicolonIndex = meaning.indexOf(",", meaning.indexOf(",") + 1);
 
   // If the second semicolon is found
   if (secondSemicolonIndex !== -1) {
@@ -123,7 +116,7 @@ function trimMeaning(meaning) {
   }
 
   // If the second semicolon is not found, return the original string
-  return meaning;
+  return meaning.trim();
 }
 
 function trimReading(reading) {
@@ -140,7 +133,7 @@ function trimReading(reading) {
     }
 
     if (onyomi.length === 2 && kunyomi.length === 2) {
-      break; 
+      break;
     }
   }
 
@@ -260,12 +253,14 @@ function generateResults() {
   window.scrollTo(0, 0);
   resultString.textContent = `Wow, you know approximately ${score} kanji!`;
   if (incorrectAnswers.length > 0) {
-    incorrectkanjiTextArea.value = "kanji you answered incorrectly:\n";
+    incorrectkanjiTextArea.value = "Kanji you answered incorrectly:\n";
     incorrectAnswers.forEach((kanjiNum, idx) => {
       currkanji = kanjiList[kanjiNum];
       incorrectkanjiTextArea.value += `\n${idx + 1}. ${
-        simplifiedCharset ? currkanji.simplified : currkanji.traditional
-      } : ${currkanji.pronunciation} -- ${trimMeaning(currkanji.meaning)}\n`;
+        currkanji.kanji
+      } : ${trimReading(currkanji.kana)} -- ${trimMeaning(
+        currkanji.english
+      )}\n`;
     });
   } else {
     incorrectkanjiTextArea.value =
@@ -326,9 +321,6 @@ document.addEventListener("click", function (event) {
 // When the user clicks on <span> (x), close the modal
 closeListModal.onclick = function () {
   modalChooseList.style.display = "none";
-  simpBtn.classList.remove("choice-activated");
-  tradBtn.classList.remove("choice-activated");
-  beginTestBtn.classList.add("disabled-button");
 };
 
 closeAboutModal.onclick = function () {
@@ -355,15 +347,12 @@ window.onclick = function (event) {
     modalAbout.style.display = "none";
     modalHelp.style.display = "none";
     modalAbandon.style.display = "none";
-    simpBtn.classList.remove("choice-activated");
-    tradBtn.classList.remove("choice-activated");
-    beginTestBtn.classList.add("disabled-button");
   }
 };
 
 // Event Listeners
 
-// Makes sure only one pronunciation choice can be selected at once
+// Makes sure only one reading choice can be selected at once
 pronChoiceList.forEach((button) => {
   button.addEventListener("click", (event) => {
     if (event.target.classList.contains("choice-activated")) {
@@ -444,18 +433,18 @@ submitAnswerBtn.addEventListener("click", function () {
     pronPrompt.textContent = 'You submitted "I don\'t know" for this kanji.';
     meanPrompt.textContent = "";
     pronChoiceList.forEach((ele) => {
-      if (ele.textContent === currentCorrectkanji.pronunciation) {
+      if (ele.textContent === trimReading(currentCorrectkanji.kana)) {
         ele.classList.add("correct-style");
       }
     });
     meaningChoiceList.forEach((ele) => {
-      if (ele.textContent === trimMeaning(currentCorrectkanji.meaning)) {
+      if (ele.textContent === trimMeaning(currentCorrectkanji.english)) {
         ele.classList.add("correct-style");
       }
     });
   }
 
-  // Evaluates answer of pronunciation and meaning, correct answer only set if both are correct
+  // Evaluates answer of reading and meaning, correct answer only set if both are correct
   else {
     const pronSelection = document.querySelector(
       ".pron-choice.choice-activated"
@@ -464,39 +453,39 @@ submitAnswerBtn.addEventListener("click", function () {
       ".mean-choice.choice-activated"
     );
 
-    // Check pronunciation for correctness
-    if (currentCorrectkanji.pronunciation == pronSelection.textContent) {
-      pronPrompt.textContent = "Pronunciation: Correct";
+    // Check reading for correctness
+    if (trimReading(currentCorrectkanji.kana) == pronSelection.textContent) {
+      pronPrompt.textContent = "Reading: Correct";
       pronSelection.classList.add("correct-style");
     } else {
-      pronPrompt.textContent = "Pronunciation: Incorrect";
+      pronPrompt.textContent = "Reading: Incorrect";
       pronSelection.classList.add("incorrect-style");
       pronChoiceList.forEach((ele) => {
-        if (ele.textContent === currentCorrectkanji.pronunciation) {
+        if (ele.textContent === trimReading(currentCorrectkanji.kana)) {
           ele.classList.add("correct-style");
         }
       });
     }
 
     // Check meaning for correctness
-    if (trimMeaning(currentCorrectkanji.meaning) == meanSelection.textContent) {
+    if (trimMeaning(currentCorrectkanji.english) == meanSelection.textContent) {
       meanPrompt.textContent = "Definition: Correct";
       meanSelection.classList.add("correct-style");
     } else {
       meanPrompt.textContent = "Definition: Incorrect";
       meanSelection.classList.add("incorrect-style");
       meaningChoiceList.forEach((ele) => {
-        if (ele.textContent === trimMeaning(currentCorrectkanji.meaning)) {
+        if (ele.textContent === trimMeaning(currentCorrectkanji.english)) {
           ele.classList.add("correct-style");
         }
       });
     }
 
     // Evaluates total answer for correctness.
-    // Answers are only correct if user selected correct pronunciation and meaning
+    // Answers are only correct if user selected correct reading and meaning
     if (
-      currentCorrectkanji.pronunciation == pronSelection.textContent &&
-      trimMeaning(currentCorrectkanji.meaning) == meanSelection.textContent
+      trimReading(currentCorrectkanji.kana) == pronSelection.textContent &&
+      trimMeaning(currentCorrectkanji.english) == meanSelection.textContent
     ) {
       correctAnswer = true;
     } else {
@@ -510,27 +499,7 @@ submitAnswerBtn.addEventListener("click", function () {
   calculateRange();
 });
 
-simpBtn.addEventListener("click", function () {
-  tradBtn.classList.remove("choice-activated");
-  simpBtn.classList.add("choice-activated");
-  beginTestBtn.classList.remove("disabled-button");
-});
-
-tradBtn.addEventListener("click", function () {
-  simpBtn.classList.remove("choice-activated");
-  tradBtn.classList.add("choice-activated");
-  beginTestBtn.classList.remove("disabled-button");
-});
-
 beginTestBtn.addEventListener("click", function () {
-  if (tradBtn.classList.contains("choice-activated")) {
-    simplifiedCharset = false;
-  } else {
-    simplifiedCharset = true;
-  }
-  simpBtn.classList.remove("choice-activated");
-  tradBtn.classList.remove("choice-activated");
-  beginTestBtn.classList.add("disabled-button");
   initializeTest();
 });
 

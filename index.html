@@ -14,7 +14,10 @@
         <img src="kkat-logo-large.png" />
       </div>
       <div class="title">
-        <h1>KKAT - Kanji Knowledge Assessment Test</h1>
+        <h1>
+          <span>KKAT - </span><span>Kanji Knowledge </span
+          ><span>Assessment Test</span>
+        </h1>
       </div>
 
       <div class="nav-links">
@@ -58,14 +61,14 @@
 
       <div class="app-container hidden">
         <textarea class="kanji-prompt" readonly></textarea>
-        <p class="pron-prompt">Select the correct pronunciation:</p>
+        <p class="pron-prompt">Select the correct reading:</p>
         <div class="button-container pronunciation-choices">
           <button class="pron-1 pron-choice">Pron 1</button>
           <button class="pron-2 pron-choice">Pron 1</button>
           <button class="pron-3 pron-choice">Pron 1</button>
           <button class="pron-4 pron-choice">Pron 1</button>
         </div>
-        <p class="mean-prompt">Select the correct definition:</p>
+        <p class="mean-prompt">Select the correct English definition:</p>
         <div class="button-container meaning-choices">
           <button class="mean-1 mean-choice">Def 1</button>
           <button class="mean-2 mean-choice">Def 1</button>
@@ -93,10 +96,10 @@
             <p>
               The goal of this test is to estimate the amount of kanji you know.
               You will be presented with a kanji prompt, and be asked to select
-              the correct pronunciation and definition from four choices. If you
-              do not know the answer, you can simply click the "I don't know"
-              button. Submitting "I don't know" has the exact same effect as
-              submitting an incorrect answer. You are encouraged, however, to
+              the correct reading and English definition from four choices. If
+              you do not know the answer, you can simply click the "I don't
+              know" button. Submitting "I don't know" has the exact same effect
+              as submitting an incorrect answer. You are encouraged, however, to
               not guess if you are unsure of the correct answer. Guessing or
               using process of elimination when you are unsure of the answer
               will result in a more inaccurate calculation of your knowledge.
@@ -111,14 +114,9 @@
               and averaging your results.
             </p>
             <p>Good luck!</p>
-            <h1>Choose your character set:</h1>
-            <div class="button-container">
-              <button class="simplified-btn">Simplified</button>
-              <button class="traditional-btn">Traditional</button>
-            </div>
             <br />
             <div class="button-container">
-              <button class="begin-button disabled-button">Begin Test!</button>
+              <button class="begin-button">Begin Test!</button>
             </div>
           </div>
         </div>
@@ -131,47 +129,55 @@
             <h1>About</h1>
             <p>
               This tool was developed with the purpose of assisting you in
-              estimating your proficiency in Chinese characters (kanji). It
-              utilizes a curated list of the 6,000 most frequently used Chinese
-              characters, identified by the PRC Ministry of Education. The test
-              prompts have been randomized, ensuring a distinct experience each
-              time you undertake the assessment. While the application's
-              algorithm has been carefully designed to accurately evaluate your
-              knowledge, the inherent variability of the randomized test prompts
-              may result in score fluctuations between evaluations. I recommend
-              taking the test multiple times and averaging the results to obtain
-              a more precise assessment of your proficiency.
+              estimating your proficiency in Kanji (Chinese characters used in
+              Japanese). It utilizes a curated list of the 6,355 most frequently
+              used Kanji. The test prompts have been randomized, ensuring a
+              distinct experience each time you undertake the assessment. While
+              the application's algorithm has been carefully designed to
+              accurately evaluate your knowledge, the inherent variability of
+              the randomized test prompts may result in score fluctuations
+              between evaluations. I recommend taking the test multiple times
+              and averaging the results to obtain a more precise assessment of
+              your proficiency.
             </p>
             <div class="skill-levels">
               <h3>Approximate skill levels:</h3>
               <ul>
                 <p>
-                  <span class="char-nums">0-500 Characters: </span
-                  ><span class="level">Beginner</span>
+                  <span class="char-nums">0 to 120 Kanji: </span
+                  ><span class="level">JLPT N5 (Beginner)</span>
                 </p>
                 <p>
-                  <span class="char-nums">500-1000 Characters: </span
-                  ><span class="level">Lower Intermediate</span>
+                  <span class="char-nums">120 to 300 Kanji: </span
+                  ><span class="level">JLPT N4 (Lower Intermediate)</span>
                 </p>
                 <p>
-                  <span class="char-nums">1000-2000 Characters: </span
-                  ><span class="level">Intermediate</span>
+                  <span class="char-nums">300 to 660 Kanji: </span
+                  ><span class="level">JLPT N3 (Intermediate)</span>
                 </p>
                 <p>
-                  <span class="char-nums">2000-3000 Characters: </span
-                  ><span class="level">Upper Intermediate</span>
+                  <span class="char-nums">660 to 1140 Kanji: </span
+                  ><span class="level">JLPT N2 (Upper Intermediate)</span>
                 </p>
                 <p>
-                  <span class="char-nums">3000-4000 Characters: </span
-                  ><span class="level">Advanced</span>
+                  <span class="char-nums">1140 to 2141 Kanji: </span
+                  ><span class="level">JLPT N1 (Advanced)</span>
                 </p>
                 <p>
-                  <span class="char-nums">4000-5000 Characters: </span
-                  ><span class="level">Highly Advanced</span>
+                  <span class="char-nums">2141 to 3000 Kanji: </span
+                  ><span class="level">Near-Native</span>
                 </p>
                 <p>
-                  <span class="char-nums">5000-6000 Characters: </span
-                  ><span class="level">kanji Hero</span>
+                  <span class="char-nums">3000 to 4000 Kanji: </span
+                  ><span class="level">Kanji Hero 🦸</span>
+                </p>
+                <p>
+                  <span class="char-nums">4000 to 5000 Kanji: </span
+                  ><span class="level">King of Kanji 🫅</span>
+                </p>
+                <p>
+                  <span class="char-nums">5000 to 6355 Kanji: </span
+                  ><span class="level">Kanji no Kami-sama 🧞‍♂️</span>
                 </p>
               </ul>
             </div>
@@ -191,6 +197,9 @@
                 >take a look at my projects on GitHub</a
               >. Thank you for your support, and let me know if you any ideas
               for language learning projects!
+            </p>
+            <p>
+              Kanji readings and definitions sourced from Jim Breen's KANJIDIC.
             </p>
           </div>
         </div>
@@ -216,36 +225,6 @@
               provide information that renders the answer obvious. If you come
               across such instances, please report them, and I will promptly
               rectify the issue.
-            </p>
-            <p>
-              While certain characters may have multiple possible readings, for
-              practical reasons, most characters are associated with a single
-              pronunciation. If you find that the pronunciation provided for an
-              answer is not the most common one or believe that including an
-              additional secondary pronunciation is crucial, please inform me,
-              and I will review the matter on a case-by-case basis.
-            </p>
-            <p>
-              Certain characters may not possess a distinct meaning on their own
-              but are specifically associated with a particular word. For such
-              characters, the definition provided refers to the meaning within
-              the word where the character is commonly found.
-            </p>
-            <p>
-              Some characters exhibit different standard pronunciations in
-              Taiwan. While I am actively working on incorporating both
-              pronunciation variants, this process is time-consuming as it
-              requires each change to be made manually. Please feel free to let
-              me know if you would like a Taiwanese pronunciation variant to be
-              included or if you encounter any pronunciation choices that may be
-              misleading.
-            </p>
-            <p>
-              Handling the correct answer for the definition of characters
-              exclusively used in names can be challenging. In such cases, the
-              only definition provided for these characters may be "a surname"
-              or "used in names." Your recommendations for addressing such
-              characters are welcome and greatly appreciated.
             </p>
             <h3>
               Thank you for utilizing this tool and providing your valuable

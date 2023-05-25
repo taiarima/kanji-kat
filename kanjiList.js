@@ -811,7 +811,7 @@ const kanjiList = [
   },
   {
     kanji: "心",
-    kana: "シン    こころ    -ごころ    T2りっしんべん",
+    kana: "シン    こころ    -ごころ    りっしんべん",
     english: "heart, mind, spirit ",
   },
   {
@@ -2003,7 +2003,7 @@ const kanjiList = [
   },
   {
     kanji: "皮",
-    kana: "ヒ    かわ    T2けがわ",
+    kana: "ヒ    かわ    けがわ",
     english: "pelt, skin, hide, leather ",
   },
   {
@@ -2510,7 +2510,7 @@ const kanjiList = [
   },
   {
     kanji: "欠",
-    kana: "ケツ    ケン    か.ける    か.く    T2あくび",
+    kana: "ケツ    ケン    か.ける    か.く    あくび",
     english: "lack, gap, fail ",
   },
   {
@@ -3643,7 +3643,7 @@ const kanjiList = [
   },
   {
     kanji: "支",
-    kana: "シ    ささ.える    つか.える    か.う    T2しんよう    じゅうまた",
+    kana: "シ    ささ.える    つか.える    か.う    しんよう    じゅうまた",
     english: "branch, support, sustain ",
   },
   {
@@ -6972,7 +6972,7 @@ const kanjiList = [
   },
   {
     kanji: "斤",
-    kana: "キン    T2おの",
+    kana: "キン    おの",
     english: "axe, 1.32 lb, catty, counter for loaves of bread ",
   },
   {
@@ -9899,7 +9899,7 @@ const kanjiList = [
   },
   {
     kanji: "牙",
-    kana: "ガ    ゲ    きば    は    T2きばへん",
+    kana: "ガ    ゲ    きば    は    きばへん",
     english: "tusk, fang ",
   },
   {
@@ -9979,7 +9979,7 @@ const kanjiList = [
   },
   {
     kanji: "巾",
-    kana: "キン    フク    おお.い    ちきり    きれ    T2はば",
+    kana: "キン    フク    おお.い    ちきり    きれ    はば",
     english: "towel, hanging scroll, width ",
   },
   {
@@ -11206,7 +11206,7 @@ const kanjiList = [
   },
   {
     kanji: "禾",
-    kana: "カ    いね    T2のぎ    のぎへん",
+    kana: "カ    いね    のぎ    のぎへん",
     english: "2-branch tree ",
   },
   {
@@ -12187,7 +12187,7 @@ const kanjiList = [
   },
   {
     kanji: "艮",
-    kana: "コン    ゴン    うしとら    T2ねずくり",
+    kana: "コン    ゴン    うしとら    ねずくり",
     english: "northeast (Oriental zodiac), stopping, good radical (no. 138) ",
   },
   {
@@ -15414,7 +15414,7 @@ const kanjiList = [
   },
   {
     kanji: "丶",
-    kana: "チュ    T2てん",
+    kana: "チュ    てん",
     english: "dot, tick or dot radical (no. 3) ",
   },
   {
@@ -15444,7 +15444,7 @@ const kanjiList = [
   },
   {
     kanji: "亅",
-    kana: "ケツ    かぎ    T2はねぼう",
+    kana: "ケツ    かぎ    はねぼう",
     english: "feathered stick, barb ",
   },
   {
@@ -15484,7 +15484,7 @@ const kanjiList = [
   },
   {
     kanji: "亠",
-    kana: "トウ    T2なべぶた",
+    kana: "トウ    なべぶた",
     english: "kettle lid ",
   },
   {
@@ -15954,7 +15954,7 @@ const kanjiList = [
   },
   {
     kanji: "儿",
-    kana: "ジン    ニン    がい    T2にんにょう    ひとあし",
+    kana: "ジン    ニン    がい    にんにょう    ひとあし",
     english: "legs radical (no. 10) ",
   },
   {
@@ -16009,7 +16009,7 @@ const kanjiList = [
   },
   {
     kanji: "冂",
-    kana: "キョウ    ケイ    T2まきがまえ    えながまえ    どうがまえ    けいがまえ",
+    kana: "キョウ    ケイ    まきがまえ    えながまえ    どうがまえ    けいがまえ",
     english: "upside-down box radical (no. 11) ",
   },
   {
@@ -16049,7 +16049,7 @@ const kanjiList = [
   },
   {
     kanji: "冖",
-    kana: "ベキ    T2わかんむり    べきかんむり",
+    kana: "ベキ    わかんむり    べきかんむり",
     english: "wa-shaped crown radical (no. 14) ",
   },
   {
@@ -16079,7 +16079,7 @@ const kanjiList = [
   },
   {
     kanji: "冫",
-    kana: "ヒョウ    こおり    T2にすい",
+    kana: "ヒョウ    こおり    にすい",
     english: "two-stroke water radical or ice radical (no. 15) ",
   },
   {
@@ -16129,7 +16129,7 @@ const kanjiList = [
   },
   {
     kanji: "几",
-    kana: "キ    きにょう    T2つくえ",
+    kana: "キ    きにょう    つくえ",
     english: "table, table enclosure ",
   },
   {
@@ -16149,7 +16149,7 @@ const kanjiList = [
   },
   {
     kanji: "凵",
-    kana: "カン    T2うけばこ    かんにょう",
+    kana: "カン    うけばこ    かんにょう",
     english: "open box enclosure ",
   },
   {
@@ -16369,7 +16369,7 @@ const kanjiList = [
   },
   {
     kanji: "勹",
-    kana: "ホウ    つつ.む    T2つつみがまえ",
+    kana: "ホウ    つつ.む    つつみがまえ",
     english: "wrapping enclosure ",
   },
   {
@@ -16404,12 +16404,12 @@ const kanjiList = [
   },
   {
     kanji: "匕",
-    kana: "ヒ    さじ    T2さじのひ",
+    kana: "ヒ    さじ    さじのひ",
     english: "spoon ",
   },
   {
     kanji: "匚",
-    kana: "ホウ    T2はこがまえ",
+    kana: "ホウ    はこがまえ",
     english: "box-on-side enclosure ",
   },
   {
@@ -16434,7 +16434,7 @@ const kanjiList = [
   },
   {
     kanji: "匸",
-    kana: "ケイ    T2かくしがまえ",
+    kana: "ケイ    かくしがまえ",
     english: "hiding enclosure radical (no. 23) ",
   },
   {
@@ -16479,7 +16479,7 @@ const kanjiList = [
   },
   {
     kanji: "卩",
-    kana: "セツ    わりふ    T2ふしづくり",
+    kana: "セツ    わりふ    ふしづくり",
     english: "seal ",
   },
   {
@@ -16504,7 +16504,7 @@ const kanjiList = [
   },
   {
     kanji: "厂",
-    kana: "カン    かりがね    T2がんだれ",
+    kana: "カン    かりがね    がんだれ",
     english: "wild goose, trailing cliff ",
   },
   {
@@ -16539,7 +16539,7 @@ const kanjiList = [
   },
   {
     kanji: "厶",
-    kana: "シ    ボウ    ム    わたくし    ござ.る    T2む",
+    kana: "シ    ボウ    ム    わたくし    ござ.る    む",
     english: "I, myself ",
   },
   {
@@ -17174,7 +17174,7 @@ const kanjiList = [
   },
   {
     kanji: "囗",
-    kana: "イ    コク    T2くにがまえ",
+    kana: "イ    コク    くにがまえ",
     english: "box or enclosure radical (no. 31), box ",
   },
   {
@@ -17564,12 +17564,12 @@ const kanjiList = [
   },
   {
     kanji: "夂",
-    kana: "チ    しゅう    T2ふゆがしら",
+    kana: "チ    しゅう    ふゆがしら",
     english: "winter radical (no. 34) ",
   },
   {
     kanji: "夊",
-    kana: "スイ    ゆき    T2すいにょう",
+    kana: "スイ    ゆき    すいにょう",
     english: "winter variant radical (no. 34) ",
   },
   {
@@ -17979,7 +17979,7 @@ const kanjiList = [
   },
   {
     kanji: "宀",
-    kana: "ベン    メン    T2うかんむり",
+    kana: "ベン    メン    うかんむり",
     english: "shaped crown ",
   },
   {
@@ -18099,7 +18099,7 @@ const kanjiList = [
   },
   {
     kanji: "尢",
-    kana: "オウ    T2だいのまげあし    もっとも",
+    kana: "オウ    だいのまげあし    もっとも",
     english: "crooked-big radical (no. 43) ",
   },
   {
@@ -18109,7 +18109,7 @@ const kanjiList = [
   },
   {
     kanji: "尸",
-    kana: "シ    かたしろ    T2しかばね    しかばねかんむり",
+    kana: "シ    かたしろ    しかばね    しかばねかんむり",
     english: "corpse, remains, flag radical (no. 44) ",
   },
   {
@@ -18159,7 +18159,7 @@ const kanjiList = [
   },
   {
     kanji: "屮",
-    kana: "T2テツ",
+    kana: "テツ",
     english: "old grass radical (no. 45) ",
   },
   {
@@ -18445,7 +18445,7 @@ const kanjiList = [
   },
   {
     kanji: "巛",
-    kana: "セン    かわ    T2まがりがわ",
+    kana: "セン    かわ    まがりがわ",
     english: "curving river radical (no.47) ",
   },
   {
@@ -18560,7 +18560,7 @@ const kanjiList = [
   },
   {
     kanji: "幺",
-    kana: "ヨウ    ちいさい    T2いとがしら    ようへん",
+    kana: "ヨウ    ちいさい    いとがしら    ようへん",
     english: "short thread radical (no. 52) ",
   },
   {
@@ -18570,7 +18570,7 @@ const kanjiList = [
   },
   {
     kanji: "广",
-    kana: "ゲン    T2まだれ",
+    kana: "ゲン    まだれ",
     english: "dotted cliff ",
   },
   {
@@ -18670,7 +18670,7 @@ const kanjiList = [
   },
   {
     kanji: "廴",
-    kana: "イン    T2いんにょう    えんにょう",
+    kana: "イン    いんにょう    えんにょう",
     english: "long stride or stretching radical (no. 54) ",
   },
   {
@@ -18680,7 +18680,7 @@ const kanjiList = [
   },
   {
     kanji: "廾",
-    kana: "キョウ    ク    にじゅう    T2にじゅうあし",
+    kana: "キョウ    ク    にじゅう    にじゅうあし",
     english: "twenty, 20 ",
   },
   {
@@ -18705,7 +18705,7 @@ const kanjiList = [
   },
   {
     kanji: "弋",
-    kana: "ヨク    いぐるみ    T2しきがまえ",
+    kana: "ヨク    いぐるみ    しきがまえ",
     english: "piling, ceremony radical (no. 56) ",
   },
   {
@@ -18760,7 +18760,7 @@ const kanjiList = [
   },
   {
     kanji: "彑",
-    kana: "ケイ    T2けいがしら",
+    kana: "ケイ    けいがしら",
     english: "pig's head ",
   },
   {
@@ -18770,7 +18770,7 @@ const kanjiList = [
   },
   {
     kanji: "彡",
-    kana: "サン    セン    T2さんづくり    かみかざり",
+    kana: "サン    セン    さんづくり    かみかざり",
     english: "three, hair ornament, short hair or fur radical (no. 59) ",
   },
   {
@@ -18780,7 +18780,7 @@ const kanjiList = [
   },
   {
     kanji: "彳",
-    kana: "テキ    たた.ずむ    T2ぎょうにんべん",
+    kana: "テキ    たた.ずむ    ぎょうにんべん",
     english: "stop, linger, loiter ",
   },
   {
@@ -19481,7 +19481,7 @@ const kanjiList = [
   },
   {
     kanji: "戈",
-    kana: "カ    ほこ    ほこづくり    T2かのほこ",
+    kana: "カ    ほこ    ほこづくり    かのほこ",
     english: "halberd, arms, festival car, float ",
   },
   {
@@ -20112,12 +20112,12 @@ const kanjiList = [
   },
   {
     kanji: "攴",
-    kana: "ホク    T2ぼくづくり    ぼくにょう    とまた",
+    kana: "ホク    ぼくづくり    ぼくにょう    とまた",
     english: "strike, hit, folding chair radical (no. 66) ",
   },
   {
     kanji: "攵",
-    kana: "ホク    T2のぶん    ぼくづくり    ぼくにょう",
+    kana: "ホク    のぶん    ぼくづくり    ぼくにょう",
     english: "strike, hit, folding chair radical variant (no. 66) ",
   },
   {
@@ -20262,12 +20262,12 @@ const kanjiList = [
   },
   {
     kanji: "无",
-    kana: "ブ    ム    なし    ない    T2むにょう    む    なし",
+    kana: "ブ    ム    なし    ない    むにょう    む    なし",
     english: "nothing, not exist, crooked heaven radical (no.71) ",
   },
   {
     kanji: "旡",
-    kana: "キ    ケ    む    なし    T2すでのつくり",
+    kana: "キ    ケ    む    なし    すでのつくり",
     english: "sob, choke ",
   },
   {
@@ -20452,7 +20452,7 @@ const kanjiList = [
   },
   {
     kanji: "曰",
-    kana: "エツ    いわ.く    のたま.わく    ここに    T2ひらび",
+    kana: "エツ    いわ.く    のたま.わく    ここに    ひらび",
     english: "say, reason, pretext, history, past ",
   },
   {
@@ -21508,7 +21508,7 @@ const kanjiList = [
   },
   {
     kanji: "歹",
-    kana: "ガツ    ガチ    タイ    T2がつへん    いちたへん    しにがまえ",
+    kana: "ガツ    ガチ    タイ    がつへん    いちたへん    しにがまえ",
     english: "bare bone, bad, wrong, death radical (n. 78) ",
   },
   {
@@ -21583,7 +21583,7 @@ const kanjiList = [
   },
   {
     kanji: "殳",
-    kana: "シュ    また    ほこ    T2ほこつくり    るまた",
+    kana: "シュ    また    ほこ    ほこつくり    るまた",
     english: "pike, windy-again radical (no. 79) ",
   },
   {
@@ -21603,7 +21603,7 @@ const kanjiList = [
   },
   {
     kanji: "毋",
-    kana: "ブ    ム    はは    ぼ    ない    なか.れ    T2なかれ    かんのはは",
+    kana: "ブ    ム    はは    ぼ    ない    なか.れ    なかれ    かんのはは",
     english: "do not, must not, be not, mother radical (no. 80) ",
   },
   {
@@ -21648,7 +21648,7 @@ const kanjiList = [
   },
   {
     kanji: "气",
-    kana: "キ    ケ    いき    T2きがまえ",
+    kana: "キ    ケ    いき    きがまえ",
     english: "spirit, steam radical (no. 84) ",
   },
   {
@@ -22733,7 +22733,7 @@ const kanjiList = [
   },
   {
     kanji: "爻",
-    kana: "コウ    ギョウ    まじ.わる    T2めめ    まじわる",
+    kana: "コウ    ギョウ    まじ.わる    めめ    まじわる",
     english:
   "to mix with, to asociate with, to join, double X radical (no. 89) ",
   },
@@ -22744,7 +22744,7 @@ const kanjiList = [
   },
   {
     kanji: "爿",
-    kana: "ショウ    ソウ    T2しょうへん",
+    kana: "ショウ    ソウ    しょうへん",
     english: "left-side kata ",
   },
   {
@@ -23614,7 +23614,7 @@ const kanjiList = [
   },
   {
     kanji: "癶",
-    kana: "ハツ    T2はつがしら",
+    kana: "ハツ    はつがしら",
     english: "dotted tent radical (no. 105) ",
   },
   {
@@ -25465,7 +25465,7 @@ const kanjiList = [
   },
   {
     kanji: "网",
-    kana: "モウ    ボウ    あみ    T2あみがしら    よんかしら    よこめ",
+    kana: "モウ    ボウ    あみ    あみがしら    よんかしら    よこめ",
     english: "net, net or net crown radical (no. 122) ",
   },
   {
@@ -25665,7 +25665,7 @@ const kanjiList = [
   },
   {
     kanji: "耒",
-    kana: "ライ    ルイ    き    く    すき    T2らいすき",
+    kana: "ライ    ルイ    き    く    すき    らいすき",
     english: "come, plough, 3-branch tree ",
   },
   {
@@ -25775,7 +25775,7 @@ const kanjiList = [
   },
   {
     kanji: "聿",
-    kana: "イチ    イツ    ふで    ここに    T2ふでづくり",
+    kana: "イチ    イツ    ふで    ここに    ふでづくり",
     english:
   "brush, finally, self, relate, follow, here, fast, writing brush radical (no. 129) ",
   },
@@ -26248,7 +26248,7 @@ const kanjiList = [
   },
   {
     kanji: "艸",
-    kana: "ソウ    くさ    T2くさかんむり    そうこう",
+    kana: "ソウ    くさ    くさかんむり    そうこう",
     english: "grass, plants, grass radical (no. 140) ",
   },
   {
@@ -27013,7 +27013,7 @@ const kanjiList = [
   },
   {
     kanji: "虍",
-    kana: "コ    T2とらかんむり    とらがしら",
+    kana: "コ    とらかんむり    とらがしら",
     english: "tiger spots, mottled, tiger or tiger crown radical (no. 141) ",
   },
   {
@@ -27783,7 +27783,7 @@ const kanjiList = [
   },
   {
     kanji: "襾",
-    kana: "ア    け    T2にし",
+    kana: "ア    け    にし",
     english: "cover, place on top of, west radical variant (no. 146) ",
   },
   {
@@ -28299,7 +28299,7 @@ const kanjiList = [
   },
   {
     kanji: "豕",
-    kana: "シ    T2いのこ",
+    kana: "シ    いのこ",
     english: "pig, hog ",
   },
   {
@@ -28314,7 +28314,7 @@ const kanjiList = [
   },
   {
     kanji: "豸",
-    kana: "タイ    チ    T2むじなへん",
+    kana: "タイ    チ    むじなへん",
     english: "snake, legless insect, badger or clawed dog radical (no. 153) ",
   },
   {
@@ -30116,7 +30116,7 @@ const kanjiList = [
   },
   {
     kanji: "隶",
-    kana: "タイ    T2れいづくり",
+    kana: "タイ    れいづくり",
     english: "extend, give, cast, slave radical (no. 171) ",
   },
   {
@@ -30126,7 +30126,7 @@ const kanjiList = [
   },
   {
     kanji: "隹",
-    kana: "サイ    スイ    とり    T2ふるとり",
+    kana: "サイ    スイ    とり    ふるとり",
     english: "bird, old bird radical (no. 172) ",
   },
   {
@@ -30402,7 +30402,7 @@ const kanjiList = [
   },
   {
     kanji: "韋",
-    kana: "イ    そむ.く    T2なめしがわ",
+    kana: "イ    そむ.く    なめしがわ",
     english: "tanned leather ",
   },
   {
@@ -30412,7 +30412,7 @@ const kanjiList = [
   },
   {
     kanji: "韭",
-    kana: "キュウ    ク    T2にら",
+    kana: "キュウ    ク    にら",
     english: "leek ",
   },
   {
@@ -30917,7 +30917,7 @@ const kanjiList = [
   },
   {
     kanji: "髟",
-    kana: "ヒュウ    ヒョウ    T2かみがしら    かみかんむり",
+    kana: "ヒュウ    ヒョウ    かみがしら    かみかんむり",
     english: "hair hanging long, mane, long hair radical (no.190) ",
   },
   {
@@ -31002,7 +31002,7 @@ const kanjiList = [
   },
   {
     kanji: "鬥",
-    kana: "T2とうがまえ    たたかいがまえ",
+    kana: "とうがまえ    たたかいがまえ",
     english: "broken gate radical (no. 191) ",
   },
   {
@@ -31747,7 +31747,7 @@ const kanjiList = [
   },
   {
     kanji: "黹",
-    kana: "チ    ぬう    ぬいとり    T2ふつ",
+    kana: "チ    ぬう    ぬいとり    ふつ",
     english: "sewing ",
   },
   {
