@@ -207,8 +207,8 @@ function calculateRange() {
     if (min >= max || max - min < 50) {
       // This will give the user a perfect score if they deserve it
       if (min > 5900 && incorrectAnswers.length === 0) {
-        min = 6000;
-        max = 6000;
+        min = 6300;
+        max = 6300;
         generateResults();
         return;
       }

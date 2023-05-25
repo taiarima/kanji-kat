@@ -510,7 +510,7 @@ const kanjiList = [
     kanji: "丸",
     kana: "ガン    まる    まる.める    まる.い",
     english:
-  "round, full, month, perfection, -ship, pills, make round, roll up, curl up, seduce, explain away ",
+      "round, full, month, perfection, -ship, pills, make round, roll up, curl up, seduce, explain away ",
   },
   {
     kanji: "岩",
@@ -596,7 +596,7 @@ const kanjiList = [
     kanji: "原",
     kana: "ゲン    はら",
     english:
-  "meadow, original, primitive, field, plain, prairie, tundra, wilderness ",
+      "meadow, original, primitive, field, plain, prairie, tundra, wilderness ",
   },
   {
     kanji: "言",
@@ -617,7 +617,7 @@ const kanjiList = [
     kanji: "午",
     kana: "ゴ    うま",
     english:
-  "noon, sign of the horse, 11AM-1PM, seventh sign of Chinese zodiac ",
+      "noon, sign of the horse, 11AM-1PM, seventh sign of Chinese zodiac ",
   },
   {
     kanji: "後",
@@ -692,7 +692,7 @@ const kanjiList = [
   {
     kanji: "才",
     kana: "サイ",
-    english: "genius, years old, cubic shaku ",
+    english: "ability, talent, aptitude",
   },
   {
     kanji: "細",
@@ -883,7 +883,7 @@ const kanjiList = [
     kanji: "組",
     kana: "ソ    く.む    くみ    -ぐみ",
     english:
-  "association, braid, plait, construct, assemble, unite, cooperate, grapple ",
+      "association, braid, plait, construct, assemble, unite, cooperate, grapple ",
   },
   {
     kanji: "走",
@@ -1089,7 +1089,7 @@ const kanjiList = [
     kanji: "分",
     kana: "ブン    フン    ブ    わ.ける    わ.け    わ.かれる    わ.かる    わ.かつ",
     english:
-  "part, minute of time, segment, share, degree, one's lot, duty, understand, know, rate, 1%, chances, shaku/100 ",
+      "part, minute of time, segment, share, degree, one's lot, duty, understand, know, rate, 1%, chances, shaku/100 ",
   },
   {
     kanji: "聞",
@@ -1300,7 +1300,7 @@ const kanjiList = [
     kanji: "荷",
     kana: "カ    に",
     english:
-  "baggage, shoulder-pole load, bear (a burden), shoulder (a gun), load, cargo, freight ",
+      "baggage, shoulder-pole load, bear (a burden), shoulder (a gun), load, cargo, freight ",
   },
   {
     kanji: "界",
@@ -1401,13 +1401,13 @@ const kanjiList = [
     kanji: "局",
     kana: "キョク    つぼね",
     english:
-  "bureau, board, office, affair, conclusion, court lady, lady-in-waiting, her apartment ",
+      "bureau, board, office, affair, conclusion, court lady, lady-in-waiting, her apartment ",
   },
   {
     kanji: "曲",
     kana: "キョク    ま.がる    ま.げる",
     english:
-  "bend, music, melody, composition, pleasure, injustice, fault, curve, crooked, perverse, lean ",
+      "bend, music, melody, composition, pleasure, injustice, fault, curve, crooked, perverse, lean ",
   },
   {
     kanji: "銀",
@@ -1428,7 +1428,7 @@ const kanjiList = [
     kanji: "具",
     kana: "グ    そな.える    つぶさ.に",
     english:
-  "tool, utensil, means, possess, ingredients, counter for armor, suits, sets of furniture ",
+      "tool, utensil, means, possess, ingredients, counter for armor, suits, sets of furniture ",
   },
   {
     kanji: "君",
@@ -1534,7 +1534,7 @@ const kanjiList = [
     kanji: "指",
     kana: "シ    ゆび    さ.す    -さ.し",
     english:
-  "finger, point to, indicate, put into, play (chess), measure (ruler) ",
+      "finger, point to, indicate, put into, play (chess), measure (ruler) ",
   },
   {
     kanji: "死",
@@ -1570,7 +1570,7 @@ const kanjiList = [
     kanji: "式",
     kana: "シキ",
     english:
-  "style, ceremony, rite, function, method, system, form, expression ",
+      "style, ceremony, rite, function, method, system, form, expression ",
   },
   {
     kanji: "実",
@@ -1651,7 +1651,7 @@ const kanjiList = [
     kanji: "宿",
     kana: "シュク    やど    やど.る    やど.す",
     english:
-  "inn, lodging, relay station, dwell, lodge, be pregnant, home, dwelling ",
+      "inn, lodging, relay station, dwell, lodge, be pregnant, home, dwelling ",
   },
   {
     kanji: "所",
@@ -1697,7 +1697,7 @@ const kanjiList = [
     kanji: "乗",
     kana: "ジョウ    ショウ    の.る    -の.り    の.せる",
     english:
-  "ride, power, multiplication, record, counter for vehicles, board, mount, join ",
+      "ride, power, multiplication, record, counter for vehicles, board, mount, join ",
   },
   {
     kanji: "植",
@@ -1713,7 +1713,7 @@ const kanjiList = [
     kanji: "申",
     kana: "シン    もう.す    もう.し-    さる",
     english:
-  "have the honor to, sign of the monkey, 3-5PM, ninth sign of Chinese zodiac ",
+      "have the honor to, sign of the monkey, 3-5PM, ninth sign of Chinese zodiac ",
   },
   {
     kanji: "真",
@@ -1764,7 +1764,7 @@ const kanjiList = [
     kanji: "相",
     kana: "ソウ    ショウ    あい-",
     english:
-  "inter-, mutual, together, each other, minister of state, councillor, aspect, phase, physiognomy ",
+      "inter-, mutual, together, each other, minister of state, councillor, aspect, phase, physiognomy ",
   },
   {
     kanji: "送",
@@ -1810,7 +1810,7 @@ const kanjiList = [
     kanji: "代",
     kana: "ダイ    タイ    か.わる    かわ.る    かわ.り    -がわ.り    か.える    よ    しろ",
     english:
-  "substitute, change, convert, replace, period, age, generation, charge, rate, fee ",
+      "substitute, change, convert, replace, period, age, generation, charge, rate, fee ",
   },
   {
     kanji: "第",
@@ -1851,13 +1851,13 @@ const kanjiList = [
     kanji: "注",
     kana: "チュウ    そそ.ぐ    さ.す    つ.ぐ",
     english:
-  "pour, irrigate, shed (tears), flow into, concentrate on, notes, comment, annotate ",
+      "pour, irrigate, shed (tears), flow into, concentrate on, notes, comment, annotate ",
   },
   {
     kanji: "丁",
     kana: "チョウ    テイ    チン    トウ    チ    ひのと",
     english:
-  "street, ward, town, counter for guns, tools, leaves or cakes of something, even number, 4th calendar sign ",
+      "street, ward, town, counter for guns, tools, leaves or cakes of something, even number, 4th calendar sign ",
   },
   {
     kanji: "帳",
@@ -1868,7 +1868,7 @@ const kanjiList = [
     kanji: "調",
     kana: "チョウ    しら.べる    しら.べ    ととの.う    ととの.える",
     english:
-  "tune, tone, meter, key (music), writing style, prepare, exorcise, investigate ",
+      "tune, tone, meter, key (music), writing style, prepare, exorcise, investigate ",
   },
   {
     kanji: "追",
@@ -1924,7 +1924,7 @@ const kanjiList = [
     kanji: "投",
     kana: "トウ    な.げる    -な.げ",
     english:
-  "throw, discard, abandon, launch into, join, invest in, hurl, give up, sell at a loss ",
+      "throw, discard, abandon, launch into, join, invest in, hurl, give up, sell at a loss ",
   },
   {
     kanji: "湯",
@@ -2055,7 +2055,7 @@ const kanjiList = [
     kanji: "部",
     kana: "ブ    -べ",
     english:
-  "section, bureau, dept, class, copy, part, portion, counter for copies of a newspaper or magazine ",
+      "section, bureau, dept, class, copy, part, portion, counter for copies of a newspaper or magazine ",
   },
   {
     kanji: "服",
@@ -2166,7 +2166,7 @@ const kanjiList = [
     kanji: "葉",
     kana: "ヨウ    は",
     english:
-  "leaf, plane, lobe, needle, blade, spear, counter for flat things, fragment, piece ",
+      "leaf, plane, lobe, needle, blade, spear, counter for flat things, fragment, piece ",
   },
   {
     kanji: "陽",
@@ -2232,7 +2232,7 @@ const kanjiList = [
     kanji: "案",
     kana: "アン    つくえ",
     english:
-  "plan, suggestion, draft, ponder, fear, proposition, idea, expectation, bill, worry ",
+      "plan, suggestion, draft, ponder, fear, proposition, idea, expectation, bill, worry ",
   },
   {
     kanji: "以",
@@ -2248,7 +2248,7 @@ const kanjiList = [
     kanji: "囲",
     kana: "イ    かこ.む    かこ.う    かこ.い",
     english:
-  "surround, besiege, store, paling, enclosure, encircle, preserve, keep ",
+      "surround, besiege, store, paling, enclosure, encircle, preserve, keep ",
   },
   {
     kanji: "胃",
@@ -2264,7 +2264,7 @@ const kanjiList = [
     kanji: "印",
     kana: "イン    しるし    -じるし    しる.す",
     english:
-  "stamp, seal, mark, imprint, symbol, emblem, trademark, evidence, souvenir, India ",
+      "stamp, seal, mark, imprint, symbol, emblem, trademark, evidence, souvenir, India ",
   },
   {
     kanji: "栄",
@@ -2295,13 +2295,13 @@ const kanjiList = [
     kanji: "果",
     kana: "カ    は.たす    はた.す    -は.たす    は.てる    -は.てる    は.て",
     english:
-  "fruit, reward, carry out, achieve, complete, end, finish, succeed ",
+      "fruit, reward, carry out, achieve, complete, end, finish, succeed ",
   },
   {
     kanji: "課",
     kana: "カ",
     english:
-  "chapter, lesson, section, department, division, counter for chapters (of a book) ",
+      "chapter, lesson, section, department, division, counter for chapters (of a book) ",
   },
   {
     kanji: "貨",
@@ -2317,7 +2317,7 @@ const kanjiList = [
     kanji: "改",
     kana: "カイ    あらた.める    あらた.まる",
     english:
-  "reformation, change, modify, mend, renew, examine, inspect, search ",
+      "reformation, change, modify, mend, renew, examine, inspect, search ",
   },
   {
     kanji: "械",
@@ -2383,13 +2383,13 @@ const kanjiList = [
     kanji: "器",
     kana: "キ    うつわ",
     english:
-  "utensil, vessel, receptacle, implement, instrument, ability, container, tool, set ",
+      "utensil, vessel, receptacle, implement, instrument, ability, container, tool, set ",
   },
   {
     kanji: "希",
     kana: "キ    ケ    まれ",
     english:
-  "hope, beg, request, pray, beseech, Greece, dilute (acid), rare, few, phenomenal ",
+      "hope, beg, request, pray, beseech, Greece, dilute (acid), rare, few, phenomenal ",
   },
   {
     kanji: "旗",
@@ -2450,7 +2450,7 @@ const kanjiList = [
     kanji: "競",
     kana: "キョウ    ケイ    きそ.う    せ.る",
     english:
-  "emulate, compete with, bid, sell at auction, bout, contest, race ",
+      "emulate, compete with, bid, sell at auction, bout, contest, race ",
   },
   {
     kanji: "共",
@@ -2471,7 +2471,7 @@ const kanjiList = [
     kanji: "極",
     kana: "キョク    ゴク    きわ.める    きわ.まる    きわ.まり    きわ.み    き.める    -ぎ.め    き.まる",
     english:
-  "poles, settlement, conclusion, end, highest rank, electric poles, very, extremely, most, highly, 10**48 ",
+      "poles, settlement, conclusion, end, highest rank, electric poles, very, extremely, most, highly, 10**48 ",
   },
   {
     kanji: "訓",
@@ -2572,7 +2572,7 @@ const kanjiList = [
     kanji: "差",
     kana: "サ    さ.す    さ.し",
     english:
-  "distinction, difference, variation, discrepancy, margin, balance ",
+      "distinction, difference, variation, discrepancy, margin, balance ",
   },
   {
     kanji: "最",
@@ -2613,13 +2613,13 @@ const kanjiList = [
     kanji: "殺",
     kana: "サツ    サイ    セツ    ころ.す    -ごろ.し    そ.ぐ",
     english:
-  "kill, murder, butcher, slice off, split, diminish, reduce, spoil ",
+      "kill, murder, butcher, slice off, split, diminish, reduce, spoil ",
   },
   {
     kanji: "参",
     kana: "サン    シン    まい.る    まい-    まじわる    みつ",
     english:
-  "nonplussed, three, going, coming, visiting, visit, be defeated, die, be madly in love ",
+      "nonplussed, three, going, coming, visiting, visit, be defeated, die, be madly in love ",
   },
   {
     kanji: "散",
@@ -2670,7 +2670,7 @@ const kanjiList = [
     kanji: "治",
     kana: "ジ    チ    おさ.める    おさ.まる    なお.る    なお.す",
     english:
-  "reign, be at peace, calm down, subdue, quell, govt, cure, heal, rule, conserve ",
+      "reign, be at peace, calm down, subdue, quell, govt, cure, heal, rule, conserve ",
   },
   {
     kanji: "辞",
@@ -2746,7 +2746,7 @@ const kanjiList = [
     kanji: "象",
     kana: "ショウ    ゾウ    かたど.る",
     english:
-  "elephant, pattern after, imitate, image, shape, sign (of the times) ",
+      "elephant, pattern after, imitate, image, shape, sign (of the times) ",
   },
   {
     kanji: "賞",
@@ -2787,7 +2787,7 @@ const kanjiList = [
     kanji: "積",
     kana: "セキ    つ.む    -づ.み    つ.もる    つ.もり",
     english:
-  "volume, product (x*y), acreage, contents, pile up, stack, load, amass ",
+      "volume, product (x*y), acreage, contents, pile up, stack, load, amass ",
   },
   {
     kanji: "折",
@@ -2798,7 +2798,7 @@ const kanjiList = [
     kanji: "節",
     kana: "セツ    セチ    ふし    -ぶし    のっと",
     english:
-  "node, season, period, occasion, verse, clause, stanza, honor, joint, knuckle, knob, knot, tune, melody ",
+      "node, season, period, occasion, verse, clause, stanza, honor, joint, knuckle, knob, knot, tune, melody ",
   },
   {
     kanji: "説",
@@ -2939,13 +2939,13 @@ const kanjiList = [
     kanji: "伝",
     kana: "デン    テン    つた.わる    つた.える    つた.う    つだ.う    -づた.い    つて",
     english:
-  "transmit, go along, walk along, follow, report, communicate, legend, tradition ",
+      "transmit, go along, walk along, follow, report, communicate, legend, tradition ",
   },
   {
     kanji: "徒",
     kana: "ト    いたずら    あだ",
     english:
-  "junior, emptiness, vanity, futility, uselessness, ephemeral thing, gang, set, party, people ",
+      "junior, emptiness, vanity, futility, uselessness, ephemeral thing, gang, set, party, people ",
   },
   {
     kanji: "努",
@@ -2971,7 +2971,7 @@ const kanjiList = [
     kanji: "得",
     kana: "トク    え.る    う.る",
     english:
-  "gain, get, find, earn, acquire, can, may, able to, profit, advantage, benefit ",
+      "gain, get, find, earn, acquire, can, may, able to, profit, advantage, benefit ",
   },
   {
     kanji: "特",
@@ -3032,7 +3032,7 @@ const kanjiList = [
     kanji: "標",
     kana: "ヒョウ    しるべ    しるし",
     english:
-  "signpost, seal, mark, stamp, imprint, symbol, emblem, trademark, evidence, souvenir, target ",
+      "signpost, seal, mark, stamp, imprint, symbol, emblem, trademark, evidence, souvenir, target ",
   },
   {
     kanji: "票",
@@ -3058,7 +3058,7 @@ const kanjiList = [
     kanji: "府",
     kana: "フ",
     english:
-  "borough, urban prefecture, govt office, representative body, storehouse ",
+      "borough, urban prefecture, govt office, representative body, storehouse ",
   },
   {
     kanji: "副",
@@ -3129,7 +3129,7 @@ const kanjiList = [
     kanji: "未",
     kana: "ミ    ビ    いま.だ    ま.だ    ひつじ",
     english:
-  "un-, not yet, hitherto, still, even now, sign of the ram, 1-3PM, eighth sign of Chinese zodiac ",
+      "un-, not yet, hitherto, still, even now, sign of the ram, 1-3PM, eighth sign of Chinese zodiac ",
   },
   {
     kanji: "脈",
@@ -3345,7 +3345,7 @@ const kanjiList = [
     kanji: "解",
     kana: "カイ    ゲ    と.く    と.かす    と.ける    ほど.く    ほど.ける    わか.る    さと.る",
     english:
-  "unravel, notes, key, explanation, understanding, untie, undo, solve, answer, cancel, absolve, explain, minute ",
+      "unravel, notes, key, explanation, understanding, untie, undo, solve, answer, cancel, absolve, explain, minute ",
   },
   {
     kanji: "快",
@@ -3496,7 +3496,7 @@ const kanjiList = [
     kanji: "険",
     kana: "ケン    けわ.しい",
     english:
-  "precipitous, inaccessible place, impregnable position, steep place, sharp eyes ",
+      "precipitous, inaccessible place, impregnable position, steep place, sharp eyes ",
   },
   {
     kanji: "減",
@@ -3522,7 +3522,7 @@ const kanjiList = [
     kanji: "故",
     kana: "コ    ゆえ",
     english:
-  "happenstance, especially, intentionally, reason, cause, circumstances, the late, therefore, consequently ",
+      "happenstance, especially, intentionally, reason, cause, circumstances, the late, therefore, consequently ",
   },
   {
     kanji: "護",
@@ -3593,7 +3593,7 @@ const kanjiList = [
     kanji: "際",
     kana: "サイ    きわ    -ぎわ",
     english:
-  "occasion, side, edge, verge, dangerous, adventurous, indecent, time, when ",
+      "occasion, side, edge, verge, dangerous, adventurous, indecent, time, when ",
   },
   {
     kanji: "在",
@@ -3624,7 +3624,7 @@ const kanjiList = [
     kanji: "賛",
     kana: "サン    たす.ける    たた.える",
     english:
-  "approve, praise, title or inscription on picture, assist, agree with ",
+      "approve, praise, title or inscription on picture, assist, agree with ",
   },
   {
     kanji: "酸",
@@ -3655,7 +3655,7 @@ const kanjiList = [
     kanji: "資",
     kana: "シ",
     english:
-  "assets, resources, capital, funds, data, be conducive to, contribute to ",
+      "assets, resources, capital, funds, data, be conducive to, contribute to ",
   },
   {
     kanji: "飼",
@@ -3721,7 +3721,7 @@ const kanjiList = [
     kanji: "序",
     kana: "ジョ    つい.で    ついで",
     english:
-  "preface, beginning, order, precedence, occasion, chance, incidentally ",
+      "preface, beginning, order, precedence, occasion, chance, incidentally ",
   },
   {
     kanji: "承",
@@ -3792,7 +3792,7 @@ const kanjiList = [
     kanji: "精",
     kana: "セイ    ショウ    シヤウ",
     english:
-  "refined, ghost, fairy, energy, vitality, semen, excellence, purity, skill ",
+      "refined, ghost, fairy, energy, vitality, semen, excellence, purity, skill ",
   },
   {
     kanji: "製",
@@ -3828,7 +3828,7 @@ const kanjiList = [
     kanji: "絶",
     kana: "ゼツ    た.える    た.やす    た.つ",
     english:
-  "discontinue, beyond, sever, cut off, abstain, interrupt, suppress ",
+      "discontinue, beyond, sever, cut off, abstain, interrupt, suppress ",
   },
   {
     kanji: "舌",
@@ -3914,7 +3914,7 @@ const kanjiList = [
     kanji: "断",
     kana: "ダン    た.つ    ことわ.る    さだ.める",
     english:
-  "severance, decline, refuse, apologize, warn, dismiss, prohibit, decision, judgement, cutting ",
+      "severance, decline, refuse, apologize, warn, dismiss, prohibit, decision, judgement, cutting ",
   },
   {
     kanji: "築",
@@ -3925,7 +3925,7 @@ const kanjiList = [
     kanji: "張",
     kana: "チョウ    は.る    -は.り    -ば.り",
     english:
-  "lengthen, counter for bows & stringed instruments, stretch, spread, put up (tent) ",
+      "lengthen, counter for bows & stringed instruments, stretch, spread, put up (tent) ",
   },
   {
     kanji: "提",
@@ -4081,13 +4081,13 @@ const kanjiList = [
     kanji: "編",
     kana: "ヘン    あ.む    -あ.み",
     english:
-  "compilation, knit, plait, braid, twist, editing, completed poem, part of a book ",
+      "compilation, knit, plait, braid, twist, editing, completed poem, part of a book ",
   },
   {
     kanji: "弁",
     kana: "ベン    ヘン    わきま.える    わ.ける    はなびら    あらそ.う",
     english:
-  "valve, petal, braid, speech, dialect, discrimination, dispose of, distinguish ",
+      "valve, petal, braid, speech, dialect, discrimination, dispose of, distinguish ",
   },
   {
     kanji: "保",
@@ -4258,7 +4258,7 @@ const kanjiList = [
     kanji: "巻",
     kana: "カン    ケン    ま.く    まき    ま.き",
     english:
-  "scroll, volume, book, part, roll up, wind up, tie, coil, counter for texts (or book scrolls) ",
+      "scroll, volume, book, part, roll up, wind up, tie, coil, counter for texts (or book scrolls) ",
   },
   {
     kanji: "干",
@@ -4569,7 +4569,7 @@ const kanjiList = [
     kanji: "従",
     kana: "ジュウ    ショウ    ジュ    したが.う    したが.える    より",
     english:
-  "accompany, obey, submit to, comply, follow, secondary, incidental, subordinate ",
+      "accompany, obey, submit to, comply, follow, secondary, incidental, subordinate ",
   },
   {
     kanji: "縦",
@@ -4595,7 +4595,7 @@ const kanjiList = [
     kanji: "処",
     kana: "ショ    ところ    -こ    お.る",
     english:
-  "dispose, manage, deal with, sentence, condemn, act, behave, place ",
+      "dispose, manage, deal with, sentence, condemn, act, behave, place ",
   },
   {
     kanji: "署",
@@ -4616,13 +4616,13 @@ const kanjiList = [
     kanji: "傷",
     kana: "ショウ    きず    いた.む    いた.める",
     english:
-  "wound, hurt, injure, impair, pain, injury, cut, gash, scar, weak point ",
+      "wound, hurt, injure, impair, pain, injury, cut, gash, scar, weak point ",
   },
   {
     kanji: "将",
     kana: "ショウ    ソウ    まさ.に    はた    まさ    ひきい.る    もって",
     english:
-  "leader, commander, general, admiral, or, and again, soon, from now on, just about ",
+      "leader, commander, general, admiral, or, and again, soon, from now on, just about ",
   },
   {
     kanji: "障",
@@ -4728,7 +4728,7 @@ const kanjiList = [
     kanji: "操",
     kana: "ソウ    サン    みさお    あやつ.る",
     english:
-  "maneuver, manipulate, operate, steer, chastity, virginity, fidelity ",
+      "maneuver, manipulate, operate, steer, chastity, virginity, fidelity ",
   },
   {
     kanji: "窓",
@@ -4809,7 +4809,7 @@ const kanjiList = [
     kanji: "著",
     kana: "チョ    チャク    あらわ.す    いちじる.しい",
     english:
-  "renowned, publish, write, remarkable, phenomenal, put on, don, wear, arrival, finish (race), counter for suits of clothing, literary work ",
+      "renowned, publish, write, remarkable, phenomenal, put on, don, wear, arrival, finish (race), counter for suits of clothing, literary work ",
   },
   {
     kanji: "庁",
@@ -4970,7 +4970,7 @@ const kanjiList = [
     kanji: "補",
     kana: "ホ    おぎな.う",
     english:
-  "supplement, supply, make good, offset, compensate, assistant, learner ",
+      "supplement, supply, make good, offset, compensate, assistant, learner ",
   },
   {
     kanji: "暮",
@@ -5076,7 +5076,7 @@ const kanjiList = [
     kanji: "裏",
     kana: "リ    うら",
     english:
-  "back, amidst, in, reverse, inside, palm, sole, rear, lining, wrong side ",
+      "back, amidst, in, reverse, inside, palm, sole, rear, lining, wrong side ",
   },
   {
     kanji: "律",
@@ -5127,7 +5127,7 @@ const kanjiList = [
     kanji: "為",
     kana: "イ    ため    な.る    な.す    す.る    たり    つく.る    なり",
     english:
-  "do, change, make, benefit, welfare, be of use, reach to, try, practice, cost, serve as, good, advantage, as a result of ",
+      "do, change, make, benefit, welfare, be of use, reach to, try, practice, cost, serve as, good, advantage, as a result of ",
   },
   {
     kanji: "維",
@@ -5223,7 +5223,7 @@ const kanjiList = [
     kanji: "押",
     kana: "オウ    お.す    お.し-    お.っ-    お.さえる    おさ.える",
     english:
-  "push, stop, check, subdue, attach, seize, weight, shove, press, seal, do in spite of ",
+      "push, stop, check, subdue, attach, seize, weight, shove, press, seal, do in spite of ",
   },
   {
     kanji: "沖",
@@ -5679,7 +5679,7 @@ const kanjiList = [
     kanji: "旨",
     kana: "シ    むね    うま.い",
     english:
-  "delicious, relish, show a liking for, purport, will, clever, expert ",
+      "delicious, relish, show a liking for, purport, will, clever, expert ",
   },
   {
     kanji: "紫",
@@ -5795,7 +5795,7 @@ const kanjiList = [
     kanji: "召",
     kana: "ショウ    め.す",
     english:
-  "seduce, call, send for, wear, put on, ride in, buy, eat, drink, catch (cold) ",
+      "seduce, call, send for, wear, put on, ride in, buy, eat, drink, catch (cold) ",
   },
   {
     kanji: "床",
@@ -5826,13 +5826,13 @@ const kanjiList = [
     kanji: "丈",
     kana: "ジョウ    たけ    だけ",
     english:
-  "length, 10feet, measure, Mr., Ms., height, stature, all (one has), only, that's all, merely ",
+      "length, 10feet, measure, Mr., Ms., height, stature, all (one has), only, that's all, merely ",
   },
   {
     kanji: "畳",
     kana: "ジョウ    チョウ    たた.む    たたみ    かさ.なる",
     english:
-  "tatami mat, counter for tatami mats, fold, shut up, do away with ",
+      "tatami mat, counter for tatami mats, fold, shut up, do away with ",
   },
   {
     kanji: "飾",
@@ -5933,7 +5933,7 @@ const kanjiList = [
     kanji: "占",
     kana: "セン    し.める    うらな.う",
     english:
-  "fortune-telling, divining, forecasting, occupy, hold, have, get, take ",
+      "fortune-telling, divining, forecasting, occupy, hold, have, get, take ",
   },
   {
     kanji: "扇",
@@ -5969,7 +5969,7 @@ const kanjiList = [
     kanji: "贈",
     kana: "ゾウ    ソウ    おく.る",
     english:
-  "presents, send, give to, award to, confer on, presenting something ",
+      "presents, send, give to, award to, confer on, presenting something ",
   },
   {
     kanji: "即",
@@ -6010,7 +6010,7 @@ const kanjiList = [
     kanji: "脱",
     kana: "ダツ    ぬ.ぐ    ぬ.げる",
     english:
-  "undress, removing, escape from, get rid of, be left out, take off ",
+      "undress, removing, escape from, get rid of, be left out, take off ",
   },
   {
     kanji: "丹",
@@ -6061,7 +6061,7 @@ const kanjiList = [
     kanji: "徴",
     kana: "チョウ    チ    しるし",
     english:
-  "indications, sign, omen, symptom, collect, seek, refer to, question ",
+      "indications, sign, omen, symptom, collect, seek, refer to, question ",
   },
   {
     kanji: "跳",
@@ -6102,7 +6102,7 @@ const kanjiList = [
     kanji: "添",
     kana: "テン    そ.える    そ.う    も.える    も.う",
     english:
-  "annexed, accompany, marry, suit, meet, satisfy, attach, append, garnish, imitate ",
+      "annexed, accompany, marry, suit, meet, satisfy, attach, append, garnish, imitate ",
   },
   {
     kanji: "殿",
@@ -6318,7 +6318,7 @@ const kanjiList = [
     kanji: "被",
     kana: "ヒ    こうむ.る    おお.う    かぶ.る    かぶ.せる",
     english:
-  "incur, cover, veil, brood over, shelter, wear, put on, be exposed (film), receiving ",
+      "incur, cover, veil, brood over, shelter, wear, put on, be exposed (film), receiving ",
   },
   {
     kanji: "避",
@@ -6414,7 +6414,7 @@ const kanjiList = [
     kanji: "柄",
     kana: "ヘイ    がら    え    つか",
     english:
-  "design, pattern, build, nature, handle, crank, grip, knob, shaft ",
+      "design, pattern, build, nature, handle, crank, grip, knob, shaft ",
   },
   {
     kanji: "壁",
@@ -6500,7 +6500,7 @@ const kanjiList = [
     kanji: "妙",
     kana: "ミョウ    ビョウ    たえ",
     english:
-  "exquisite, strange, queer, mystery, miracle, excellent, delicate, charming ",
+      "exquisite, strange, queer, mystery, miracle, excellent, delicate, charming ",
   },
   {
     kanji: "眠",
@@ -6561,7 +6561,7 @@ const kanjiList = [
     kanji: "与",
     kana: "ヨ    あた.える    あずか.る    くみ.する    ともに",
     english:
-  "bestow, participate in, give, award, impart, provide, cause, gift, godsend ",
+      "bestow, participate in, give, award, impart, provide, cause, gift, godsend ",
   },
   {
     kanji: "誉",
@@ -6702,7 +6702,7 @@ const kanjiList = [
     kanji: "慰",
     kana: "イ    なぐさ.める    なぐさ.む",
     english:
-  "consolation, amusement, seduce, cheer, make sport of, comfort, console ",
+      "consolation, amusement, seduce, cheer, make sport of, comfort, console ",
   },
   {
     kanji: "詠",
@@ -6773,7 +6773,7 @@ const kanjiList = [
     kanji: "華",
     kana: "カ    ケ    はな",
     english:
-  "splendor, flower, petal, shine, luster, ostentatious, showy, gay, gorgeous ",
+      "splendor, flower, petal, shine, luster, ostentatious, showy, gay, gorgeous ",
   },
   {
     kanji: "餓",
@@ -7024,7 +7024,7 @@ const kanjiList = [
     kanji: "掲",
     kana: "ケイ    かか.げる",
     english:
-  "put up (a notice), put up, hoist, display, hang out, publish, describe ",
+      "put up (a notice), put up, hoist, display, hang out, publish, describe ",
   },
   {
     kanji: "携",
@@ -7120,7 +7120,7 @@ const kanjiList = [
     kanji: "甲",
     kana: "コウ    カン    カ    きのえ",
     english:
-  "armor, high (voice), A grade, first class, former, instep, carapace ",
+      "armor, high (voice), A grade, first class, former, instep, carapace ",
   },
   {
     kanji: "硬",
@@ -7281,7 +7281,7 @@ const kanjiList = [
     kanji: "潤",
     kana: "ジュン    うるお.う    うるお.す    うる.む",
     english:
-  "wet, be watered, profit by, receive benefits, favor, charm, steep ",
+      "wet, be watered, profit by, receive benefits, favor, charm, steep ",
   },
   {
     kanji: "遵",
@@ -7322,7 +7322,7 @@ const kanjiList = [
     kanji: "衝",
     kana: "ショウ    つ.く",
     english:
-  "collide, brunt, highway, opposition (astronomy), thrust, pierce, stab, prick ",
+      "collide, brunt, highway, opposition (astronomy), thrust, pierce, stab, prick ",
   },
   {
     kanji: "鐘",
@@ -7403,7 +7403,7 @@ const kanjiList = [
     kanji: "随",
     kana: "ズイ    まにまに    したが.う",
     english:
-  "follow, though, notwithstanding, while, during, both, all, obey, submit to, comply, at the mercy of (the waves) ",
+      "follow, though, notwithstanding, while, during, both, all, obey, submit to, comply, at the mercy of (the waves) ",
   },
   {
     kanji: "髄",
@@ -7914,7 +7914,7 @@ const kanjiList = [
     kanji: "房",
     kana: "ボウ    ふさ",
     english:
-  "tassel, tuft, fringe, bunch, lock (hair), segment (orange), house, room ",
+      "tassel, tuft, fringe, bunch, lock (hair), segment (orange), house, room ",
   },
   {
     kanji: "某",
@@ -7930,7 +7930,7 @@ const kanjiList = [
     kanji: "謀",
     kana: "ボウ    ム    はか.る    たばか.る    はかりごと",
     english:
-  "conspire, cheat, impose on, plan, devise, scheme, have in mind, deceive ",
+      "conspire, cheat, impose on, plan, devise, scheme, have in mind, deceive ",
   },
   {
     kanji: "墨",
@@ -8021,7 +8021,7 @@ const kanjiList = [
     kanji: "抑",
     kana: "ヨク    おさ.える",
     english:
-  "repress, well, now, in the first place, push, shove, press, seal, do in spite of ",
+      "repress, well, now, in the first place, push, shove, press, seal, do in spite of ",
   },
   {
     kanji: "裸",
@@ -8092,7 +8092,7 @@ const kanjiList = [
     kanji: "廉",
     kana: "レン",
     english:
-  "bargain, reason, charge, suspicion, point, account, purity, honest, low price, cheap, rested, contented, peaceful ",
+      "bargain, reason, charge, suspicion, point, account, purity, honest, low price, cheap, rested, contented, peaceful ",
   },
   {
     kanji: "錬",
@@ -8143,7 +8143,7 @@ const kanjiList = [
     kanji: "逸",
     kana: "イツ    そ.れる    そ.らす    はぐ.れる",
     english:
-  "deviate, idleness, leisure, miss the mark, evade, elude, parry, diverge ",
+      "deviate, idleness, leisure, miss the mark, evade, elude, parry, diverge ",
   },
   {
     kanji: "姻",
@@ -8214,7 +8214,7 @@ const kanjiList = [
     kanji: "懐",
     kana: "カイ    エ    ふところ    なつ.かしい    なつ.かしむ    なつ.く    なつ.ける    なず.ける    いだ.く    おも.う",
     english:
-  "pocket, feelings, heart, yearn, miss someone, become attached to, bosom, breast ",
+      "pocket, feelings, heart, yearn, miss someone, become attached to, bosom, breast ",
   },
   {
     kanji: "拐",
@@ -8295,7 +8295,7 @@ const kanjiList = [
     kanji: "寛",
     kana: "カン    くつろ.ぐ    ひろ.い    ゆる.やか",
     english:
-  "tolerant, leniency, generosity, relax, feel at home, be at ease, broadminded ",
+      "tolerant, leniency, generosity, relax, feel at home, be at ease, broadminded ",
   },
   {
     kanji: "患",
@@ -8401,7 +8401,7 @@ const kanjiList = [
     kanji: "矯",
     kana: "キョウ    た.める",
     english:
-  "rectify, straighten, correct, reform, cure, control, pretend, falsify ",
+      "rectify, straighten, correct, reform, cure, control, pretend, falsify ",
   },
   {
     kanji: "暁",
@@ -8692,7 +8692,7 @@ const kanjiList = [
     kanji: "酌",
     kana: "シャク    く.む",
     english:
-  "bar-tending, serving sake, the host, draw (water), ladle, scoop, pump ",
+      "bar-tending, serving sake, the host, draw (water), ladle, scoop, pump ",
   },
   {
     kanji: "珠",
@@ -8718,7 +8718,7 @@ const kanjiList = [
     kanji: "臭",
     kana: "シュウ    くさ.い    -くさ.い    にお.う    にお.い",
     english:
-  "stinking, ill-smelling, suspicious looking, odor, savor, fragrance, be fragrant, stink, glow, be bright ",
+      "stinking, ill-smelling, suspicious looking, odor, savor, fragrance, be fragrant, stink, glow, be bright ",
   },
   {
     kanji: "酬",
@@ -9239,7 +9239,7 @@ const kanjiList = [
     kanji: "亭",
     kana: "テイ    チン",
     english:
-  "pavilion, restaurant, mansion, arbor, cottage, vaudeville, music hall, stage name ",
+      "pavilion, restaurant, mansion, arbor, cottage, vaudeville, music hall, stage name ",
   },
   {
     kanji: "偵",
@@ -9540,7 +9540,7 @@ const kanjiList = [
     kanji: "幣",
     kana: "ヘイ    ぬさ",
     english:
-  "cash, bad habit, humble prefix, gift, shinto offerings of cloth, rope, cut paper ",
+      "cash, bad habit, humble prefix, gift, shinto offerings of cloth, rope, cut paper ",
   },
   {
     kanji: "弊",
@@ -10671,7 +10671,7 @@ const kanjiList = [
     kanji: "毀",
     kana: "キ    こぼ.つ    こわ.す    こぼ.れる    こわ.れる    そし.る    やぶ.る",
     english:
-  "break, destroy, censure, be chipped, be scratched, be broken, be ruined ",
+      "break, destroy, censure, be chipped, be scratched, be broken, be ruined ",
   },
   {
     kanji: "彙",
@@ -10992,7 +10992,7 @@ const kanjiList = [
     kanji: "卯",
     kana: "ボウ    モウ    う",
     english:
-  "sign of the hare or rabbit, 5-7AM, fourth sign of Chinese zodiac, east ",
+      "sign of the hare or rabbit, 5-7AM, fourth sign of Chinese zodiac, east ",
   },
   {
     kanji: "鵜",
@@ -11913,7 +11913,7 @@ const kanjiList = [
     kanji: "捲",
     kana: "ケン    ま.く    ま.くる    まく.る    めく.る    まく.れる",
     english:
-  "roll, wind, coil, turn pages, roll up sleeves, strip off, be turned, be rolled up ",
+      "roll, wind, coil, turn pages, roll up sleeves, strip off, be turned, be rolled up ",
   },
   {
     kanji: "牽",
@@ -12304,7 +12304,7 @@ const kanjiList = [
     kanji: "捌",
     kana: "ハツ    ハチ    ベツ    さば.く    さば.ける    は.け",
     english:
-  "handle, deal with, dispose of, sell, be in demand, be worldly, be frank, be sensible, be sociable, drainage, sale, demand for, eight ",
+      "handle, deal with, dispose of, sell, be in demand, be worldly, be frank, be sensible, be sociable, drainage, sale, demand for, eight ",
   },
   {
     kanji: "錆",
@@ -12425,7 +12425,7 @@ const kanjiList = [
     kanji: "悉",
     kana: "シツ    シチ    つ.きる    ことごと    ことごと.く    つ.くす    つぶさ.に",
     english:
-  "all, entirely, altogether, completely, use up, run out of, exhaust, befriend, serve ",
+      "all, entirely, altogether, completely, use up, run out of, exhaust, befriend, serve ",
   },
   {
     kanji: "蔀",
@@ -12611,7 +12611,7 @@ const kanjiList = [
     kanji: "嘗",
     kana: "ショウ    ジョウ    かつ.て    こころ.みる    な.める",
     english:
-  "once, before, formerly, ever, never, ex-, lick, lap up, burn up, taste, undergo, underrate, despise ",
+      "once, before, formerly, ever, never, ex-, lick, lap up, burn up, taste, undergo, underrate, despise ",
   },
   {
     kanji: "妾",
@@ -13297,7 +13297,7 @@ const kanjiList = [
     kanji: "帖",
     kana: "チョウ    ジョウ    かきもの",
     english:
-  "quire (of paper), bundle of seaweed, counter for screens, notebook ",
+      "quire (of paper), bundle of seaweed, counter for screens, notebook ",
   },
   {
     kanji: "暢",
@@ -13423,7 +13423,7 @@ const kanjiList = [
     kanji: "挺",
     kana: "チョウ    テイ    ぬ.く",
     english:
-  "counter for guns, inksticks, palanquins, rickshaws, bravely volunteer ",
+      "counter for guns, inksticks, palanquins, rickshaws, bravely volunteer ",
   },
   {
     kanji: "梯",
@@ -13604,7 +13604,7 @@ const kanjiList = [
     kanji: "禿",
     kana: "トク    ちび.る    かむろ    は.げる    はげ",
     english:
-  "become bald, bare, wear out, waste away, little girl employed at a brothel ",
+      "become bald, bare, wear out, waste away, little girl employed at a brothel ",
   },
   {
     kanji: "橡",
@@ -13635,7 +13635,7 @@ const kanjiList = [
     kanji: "酉",
     kana: "ユウ    とり",
     english:
-  "west, bird, sign of the bird, 5-7PM, tenth sign of Chinese zodiac, sake radical (no. 164) ",
+      "west, bird, sign of the bird, 5-7PM, tenth sign of Chinese zodiac, sake radical (no. 164) ",
   },
   {
     kanji: "瀞",
@@ -14446,13 +14446,13 @@ const kanjiList = [
     kanji: "蔓",
     kana: "マン    バン    はびこ.る    つる",
     english:
-  "vine, tendril, influence, connections, good offices, spread, sprawl, thrive, rampant, powerful ",
+      "vine, tendril, influence, connections, good offices, spread, sprawl, thrive, rampant, powerful ",
   },
   {
     kanji: "巳",
     kana: "シ    み",
     english:
-  "sign of the snake or serpent, 9-11AM, sixth sign of Chinese zodiac ",
+      "sign of the snake or serpent, 9-11AM, sixth sign of Chinese zodiac ",
   },
   {
     kanji: "箕",
@@ -14528,7 +14528,7 @@ const kanjiList = [
     kanji: "蒙",
     kana: "モウ    ボウ    こうむ.る    おお.う    くら.い",
     english:
-  "ignorance, darkness, get, receive, be subjected to, sustain, Mongolia ",
+      "ignorance, darkness, get, receive, be subjected to, sustain, Mongolia ",
   },
   {
     kanji: "儲",
@@ -14604,7 +14604,7 @@ const kanjiList = [
     kanji: "愈",
     kana: "ユ    いよいよ    まさ.る",
     english:
-  "be superior, heal, more and more, increasingly, finally, beyond doubt ",
+      "be superior, heal, more and more, increasingly, finally, beyond doubt ",
   },
   {
     kanji: "佑",
@@ -14755,7 +14755,7 @@ const kanjiList = [
     kanji: "凌",
     kana: "リョウ    しの.ぐ",
     english:
-  "endure, keep (rain)out, stave off, tide over, defy, slight, surpass ",
+      "endure, keep (rain)out, stave off, tide over, defy, slight, surpass ",
   },
   {
     kanji: "梁",
@@ -18396,7 +18396,7 @@ const kanjiList = [
     kanji: "嶮",
     kana: "ケン    けわ.しい",
     english:
-  "inaccessible place, impregnable position, steep place, sharp eyes ",
+      "inaccessible place, impregnable position, steep place, sharp eyes ",
   },
   {
     kanji: "嶽",
@@ -19392,7 +19392,7 @@ const kanjiList = [
     kanji: "懷",
     kana: "カイ    エ    ふところ    なつ.かしい    なつ.かしむ    なつ.く    なつ.ける    いだ.く    おも.う",
     english:
-  "pocket, feelings, heart, yearn, miss someone, become attached to, bosom, breast ",
+      "pocket, feelings, heart, yearn, miss someone, become attached to, bosom, breast ",
   },
   {
     kanji: "懈",
@@ -19853,7 +19853,7 @@ const kanjiList = [
     kanji: "揉",
     kana: "ジュウ    も.む    も.める",
     english:
-  "rub, massage, shampoo, debate vigorously, train, coach, worry, get in trouble ",
+      "rub, massage, shampoo, debate vigorously, train, coach, worry, get in trouble ",
   },
   {
     kanji: "插",
@@ -20559,7 +20559,7 @@ const kanjiList = [
     kanji: "枉",
     kana: "オオ    オウ    ま.げる    ま.がる    ま.げて",
     english:
-  "bend, curve, crooked, perverse, lean, forcibly, against one's will ",
+      "bend, curve, crooked, perverse, lean, forcibly, against one's will ",
   },
   {
     kanji: "杰",
@@ -22735,7 +22735,7 @@ const kanjiList = [
     kanji: "爻",
     kana: "コウ    ギョウ    まじ.わる    めめ    まじわる",
     english:
-  "to mix with, to asociate with, to join, double X radical (no. 89) ",
+      "to mix with, to asociate with, to join, double X radical (no. 89) ",
   },
   {
     kanji: "爼",
@@ -24176,7 +24176,7 @@ const kanjiList = [
     kanji: "齋",
     kana: "サイ    つつし.む    とき    ものいみ",
     english:
-  "Buddhist food, room, religious purification, worship, avoid, alike ",
+      "Buddhist food, room, religious purification, worship, avoid, alike ",
   },
   {
     kanji: "禪",
@@ -25777,7 +25777,7 @@ const kanjiList = [
     kanji: "聿",
     kana: "イチ    イツ    ふで    ここに    ふでづくり",
     english:
-  "brush, finally, self, relate, follow, here, fast, writing brush radical (no. 129) ",
+      "brush, finally, self, relate, follow, here, fast, writing brush radical (no. 129) ",
   },
   {
     kanji: "肄",
@@ -25803,7 +25803,7 @@ const kanjiList = [
     kanji: "肓",
     kana: "コウ",
     english:
-  "interior region of the body too deep to be reached by acupuncture ",
+      "interior region of the body too deep to be reached by acupuncture ",
   },
   {
     kanji: "肚",
@@ -25819,7 +25819,7 @@ const kanjiList = [
     kanji: "冐",
     kana: "ボウ    おか.す",
     english:
-  "risk, brave, dare, face, defy, (diseases) attack, damage, desecrate, assume (a name) ",
+      "risk, brave, dare, face, defy, (diseases) attack, damage, desecrate, assume (a name) ",
   },
   {
     kanji: "肬",
@@ -28175,7 +28175,7 @@ const kanjiList = [
     kanji: "證",
     kana: "ショウ    あかし",
     english:
-  "proof, evidence, certificate, testify, verify, guarantee, witness ",
+      "proof, evidence, certificate, testify, verify, guarantee, witness ",
   },
   {
     kanji: "譖",
@@ -28816,7 +28816,7 @@ const kanjiList = [
     kanji: "軈",
     kana: "やがて",
     english:
-  "soon after, presently, almost, all but, no more than, after all, (kokuji) ",
+      "soon after, presently, almost, all but, no more than, after all, (kokuji) ",
   },
   {
     kanji: "軋",
@@ -30087,7 +30087,7 @@ const kanjiList = [
     kanji: "險",
     kana: "ケン    けわ.しい",
     english:
-  "inaccessible place, impregnable position, steep place, sharp eyes ",
+      "inaccessible place, impregnable position, steep place, sharp eyes ",
   },
   {
     kanji: "隧",
@@ -30323,7 +30323,7 @@ const kanjiList = [
     kanji: "鞅",
     kana: "オウ    ヨウ    むながい",
     english:
-  "martingale, breast harness, saddle girth, fetter, shackle, carry on back ",
+      "martingale, breast harness, saddle girth, fetter, shackle, carry on back ",
   },
   {
     kanji: "靼",
