@@ -214,6 +214,11 @@ function calculateRange() {
       }
       min = Math.max(0, max - 250);
     }
+
+    if (incorrectAnswers.length >= 15 && correctAnswers.length === 0) {
+      generateResults();
+      return;
+    }
     currentStreak = 0;
     incorrectAnswersThisRound = 0;
     correctAnswersThisRound = 0;
@@ -251,7 +256,12 @@ function generateResults() {
   appContainer.classList.add("hidden");
   resultsContainer.classList.remove("hidden");
   window.scrollTo(0, 0);
-  resultString.textContent = `Wow, you know approximately ${score} kanji!`;
+  if (correctAnswers.length === 0) {
+    resultString.textContent = `Oops, it looks like you don't very many kanji...`;
+  } else {
+    resultString.textContent = `Wow, you know approximately ${score} kanji!`;
+  }
+
   if (incorrectAnswers.length > 0) {
     incorrectkanjiTextArea.value = "Kanji you answered incorrectly:\n";
     incorrectAnswers.forEach((kanjiNum, idx) => {
@@ -264,7 +274,7 @@ function generateResults() {
     });
   } else {
     incorrectkanjiTextArea.value =
-      "You answered every question correctly! You're a kanji HERO! 💯😮🎉\n";
+      "You answered every question correctly! You're a kanji no kami-sama! 💯😮🎉\n";
   }
   // TODO: Add an SNS sharing thing
   testInProgress = false;
