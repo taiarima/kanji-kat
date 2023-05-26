@@ -224,12 +224,6 @@ function calculateRange() {
     }
     // Otherwise we assume we have narrowed in on the user's proper level
     else {
-      if (highestCorrectkanji < max) {
-        min = highestCorrectkanji;
-      }
-      if (lowestIncorrectkanji > highestCorrectkanji) {
-        max = lowestIncorrectkanji;
-      }
       generateResults();
       return;
     }
@@ -255,17 +249,37 @@ function calculateRange() {
   }
 }
 
-function testValue(maxKanjiKnown) {
+// For testing only
+let testResults = [];
+function testValue(maxKanjiKnown, testRepetitions) {
   initializeTest();
-  while (testInProgress) {
-    currentCorrectKanji = generateRandomKanji();
-    if (kanjiList.indexOf(currentCorrectKanji) <= maxKanjiKnown) {
-      correctAnswer = true;
-    } else {
-      correctAnswer = false;
+
+  for (let i = 0; i < testRepetitions; i++) {
+    initializeTest();
+    while (testInProgress) {
+      currentCorrectKanji = generateRandomKanji();
+      if (kanjiList.indexOf(currentCorrectKanji) <= maxKanjiKnown) {
+        correctAnswer = true;
+      } else {
+        correctAnswer = false;
+      }
+      calculateRange();
     }
-    calculateRange();
+    console.log(`Current value of i = ${i}`);
   }
+  const testsAverage =
+    testResults.reduce((a, b) => a + b, 0) / testResults.length;
+  let outlierCount = 0;
+  testResults.forEach((val) => {
+    if (Math.abs(val - maxKanjiKnown) > maxKanjiKnown / 10) {
+      console.log("outlier");
+      outlierCount++;
+    }
+  });
+  console.log(`outlierCount = ${outlierCount}`);
+  console.log(`testaverage = ${testsAverage}`);
+  console.log(testResults);
+  testResults = [];
 }
 
 function endCalcRangeRound() {
@@ -312,7 +326,14 @@ function initializeTest() {
 }
 
 function generateResults() {
+  if (highestCorrectkanji < max) {
+    min = highestCorrectkanji;
+  }
+  if (lowestIncorrectkanji > highestCorrectkanji) {
+    max = lowestIncorrectkanji;
+  }
   const score = Math.floor((max + min) / 2);
+  testResults.push(score);
 
   // Update GUI
   appContainer.classList.add("hidden");
