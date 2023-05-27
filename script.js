@@ -40,7 +40,7 @@ let currentCorrectKanji;
 
 // These variables will be used in the calculateRange function, initialized in initailizeTest function
 let highestCorrectkanji;
-let lowestIncorrectkanji;
+let lowestIncorrectKanji;
 let currentStreak;
 let totalAnswers;
 let correctAnswersThisRound;
@@ -167,7 +167,7 @@ function calculateRange() {
     correctAnswers.push(currentkanjiIndex);
     correctAnswersThisRound++;
   } else {
-    lowestIncorrectkanji = Math.min(currentkanjiIndex, lowestIncorrectkanji);
+    lowestIncorrectKanji = Math.min(currentkanjiIndex, lowestIncorrectKanji);
     currentStreak = currentStreak < 0 ? --currentStreak : -1;
     incorrectAnswersThisRound++;
     incorrectAnswers.push(currentkanjiIndex);
@@ -249,21 +249,47 @@ function calculateRange() {
   }
 }
 
+function removeOutliersAndGetMin(arr, threshold) {
+  // Calculate mean
+  const mean = arr.reduce((sum, value) => sum + value, 0) / arr.length;
+
+  // Calculate standard deviation
+  const squaredDifferences = arr.map((value) => (value - mean) ** 2);
+  const variance =
+    squaredDifferences.reduce((sum, value) => sum + value, 0) / arr.length;
+  const standardDeviation = Math.sqrt(variance);
+
+  // Remove outliers
+  const filteredArr = arr.filter(
+    (value) => Math.abs(value - mean) <= threshold * standardDeviation
+  );
+
+  // Get minimum value of the filtered array
+  const minValue = Math.min(...filteredArr);
+
+  return minValue;
+}
+
 // For testing only
 let testResults = [];
 function testValue(maxKanjiKnown, testRepetitions) {
   initializeTest();
-
+  let incorrectAnswerCounter = 0; // this will be used to simulate users not knowing some kanji
   for (let i = 0; i < testRepetitions; i++) {
     initializeTest();
     while (testInProgress) {
       currentCorrectKanji = generateRandomKanji();
-      if (kanjiList.indexOf(currentCorrectKanji) <= maxKanjiKnown) {
+      if (
+        (incorrectAnswerCounter !== 6) & (incorrectAnswerCounter !== 9) &&
+        kanjiList.indexOf(currentCorrectKanji) <= maxKanjiKnown
+      ) {
         correctAnswer = true;
       } else {
         correctAnswer = false;
       }
       calculateRange();
+      incorrectAnswerCounter =
+        incorrectAnswerCounter === 9 ? 0 : incorrectAnswerCounter + 1;
     }
     console.log(`Current value of i = ${i}`);
   }
@@ -272,7 +298,6 @@ function testValue(maxKanjiKnown, testRepetitions) {
   let outlierCount = 0;
   testResults.forEach((val) => {
     if (Math.abs(val - maxKanjiKnown) > maxKanjiKnown / 10) {
-      console.log("outlier");
       outlierCount++;
     }
   });
@@ -308,7 +333,7 @@ function initializeTest() {
 
   // Initialize variables for new test
   highestCorrectkanji = 0;
-  lowestIncorrectkanji = 6000;
+  lowestIncorrectKanji = 6000;
   currentStreak = 0;
   totalAnswers = 0;
   correctAnswersThisRound = 0;
@@ -326,11 +351,12 @@ function initializeTest() {
 }
 
 function generateResults() {
+  lowestIncorrectKanji = removeOutliersAndGetMin(incorrectAnswers, 2);
   if (highestCorrectkanji < max) {
     min = highestCorrectkanji;
   }
-  if (lowestIncorrectkanji > highestCorrectkanji) {
-    max = lowestIncorrectkanji;
+  if (lowestIncorrectKanji > highestCorrectkanji) {
+    max = lowestIncorrectKanji;
   }
   const score = Math.floor((max + min) / 2);
   testResults.push(score);
