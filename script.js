@@ -247,10 +247,22 @@ function calculateRange() {
     generateResults();
     return;
   }
+  updateProgressBar();
 }
 
-function removeOutliersAndGetMin(arr, threshold) {
+// Progress bar
+const progressBar = document.getElementById("progress-bar");
+
+function updateProgressBar() {
+  const percentage = (totalAnswers / triesUntilTestOver) * 100;
+  progressBar.style.width = `${percentage}%`;
+}
+
+//
+
+function removeOutliers(arr) {
   // Calculate mean
+
   const mean = arr.reduce((sum, value) => sum + value, 0) / arr.length;
 
   // Calculate standard deviation
@@ -260,6 +272,7 @@ function removeOutliersAndGetMin(arr, threshold) {
   const standardDeviation = Math.sqrt(variance);
 
   // Remove outliers
+  const threshold = 2;
   const filteredArr = arr.filter(
     (value) => Math.abs(value - mean) <= threshold * standardDeviation
   );
@@ -280,7 +293,7 @@ function testValue(maxKanjiKnown, testRepetitions) {
     while (testInProgress) {
       currentCorrectKanji = generateRandomKanji();
       if (
-        (incorrectAnswerCounter !== 6) & (incorrectAnswerCounter !== 9) &&
+        incorrectAnswerCounter !== 6 &&
         kanjiList.indexOf(currentCorrectKanji) <= maxKanjiKnown
       ) {
         correctAnswer = true;
@@ -329,6 +342,7 @@ function initializeTest() {
     ele.classList.remove("correct-style");
     ele.classList.remove("disabled-choice");
   });
+  progressBar.style.width = "0%";
   window.scrollTo(0, 0);
 
   // Initialize variables for new test
@@ -351,7 +365,7 @@ function initializeTest() {
 }
 
 function generateResults() {
-  lowestIncorrectKanji = removeOutliersAndGetMin(incorrectAnswers, 2);
+  lowestIncorrectKanji = removeOutliers(incorrectAnswers);
   if (highestCorrectkanji < max) {
     min = highestCorrectkanji;
   }
