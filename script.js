@@ -97,8 +97,8 @@ function generatePrompt() {
   kanjiPrompt.textContent = correctkanji.kanji;
   currentCorrectKanji = correctkanji;
 
-  // FOR TESTING PURPOSES REMOVE LATER
-  console.log(kanjiList.indexOf(currentCorrectKanji));
+  // FOR TESTING PURPOSES
+  // console.log(kanjiList.indexOf(currentCorrectKanji));
 }
 
 function shuffleArray(array) {
@@ -108,21 +108,23 @@ function shuffleArray(array) {
   }
 }
 
-// For meanings that are too long, delete all content after second semi-colon
+// For meanings that are too long, delete all content after second comma
 function trimMeaning(meaning) {
-  // Find the index of the second semicolon
+  // Find the index of the second comma
   const secondSemicolonIndex = meaning.indexOf(",", meaning.indexOf(",") + 1);
 
-  // If the second semicolon is found
+  // If the second comma is found
   if (secondSemicolonIndex !== -1) {
-    // Extract the substring before the second semicolon
+    // Extract the substring before the second comma
     return meaning.substring(0, secondSemicolonIndex);
   }
 
-  // If the second semicolon is not found, return the original string
+  // If the second comma is not found, return the original string
   return meaning.trim();
 }
 
+// This function trims readings that are too long by taking only the first two onyomi,
+// and first two kunyomi.
 function trimReading(reading) {
   const words = reading.split("    ");
 
@@ -179,9 +181,9 @@ function calculateRange() {
   }
 
   // For Debugging purposes
-  console.log(
-    `totalAnswers = ${totalAnswers}\n currentStreak = ${currentStreak}\n min = ${min}\n max = ${max}`
-  );
+  // console.log(
+  //   `totalAnswers = ${totalAnswers}\n currentStreak = ${currentStreak}\n min = ${min}\n max = ${max}`
+  // );
 
   // If user has gone through 50 kanji, the test is over
   if (totalAnswers >= triesUntilTestOver) {
@@ -252,17 +254,15 @@ function calculateRange() {
 
 // Progress bar
 const progressBar = document.getElementById("progress-bar");
-
 function updateProgressBar() {
   const percentage = (totalAnswers / triesUntilTestOver) * 100;
   progressBar.style.width = `${percentage}%`;
 }
 
-//
-
+// This function is to remove outliers from the incorrectAnswers Array at the end of the test
+// This should help by not overly penalizing users who got some lower level kanji incorrect.
 function removeOutliers(arr) {
   // Calculate mean
-
   const mean = arr.reduce((sum, value) => sum + value, 0) / arr.length;
 
   // Calculate standard deviation
@@ -283,11 +283,12 @@ function removeOutliers(arr) {
   return minValue;
 }
 
-// For testing only
-let testResults = [];
+// For testing application only, not for users
+let testResults = []; // Array to hold the final scores of simulated tests using the function below
 function testValue(maxKanjiKnown, testRepetitions) {
+  // maxKanjiKnown simulates a user's current level, testRepetitions is how many times to simulate a test
   initializeTest();
-  let incorrectAnswerCounter = 0; // this will be used to simulate users not knowing some kanji
+  let incorrectAnswerCounter = 0; // this is used to simulate users randomly not knowing some kanji, can be used by adjusting first if statement below
   for (let i = 0; i < testRepetitions; i++) {
     initializeTest();
     while (testInProgress) {
@@ -304,7 +305,6 @@ function testValue(maxKanjiKnown, testRepetitions) {
       incorrectAnswerCounter =
         incorrectAnswerCounter === 9 ? 0 : incorrectAnswerCounter + 1;
     }
-    console.log(`Current value of i = ${i}`);
   }
   const testsAverage =
     testResults.reduce((a, b) => a + b, 0) / testResults.length;
@@ -320,6 +320,9 @@ function testValue(maxKanjiKnown, testRepetitions) {
   testResults = [];
 }
 
+// The calcRange function above operates in "rounds". Typically, a round will last until a user gets a streak (correct or incorrect)
+// of 5 kanji, or 15 total kanji answered. After this, a new round will begin. This function resets the round after one of these
+// conditions has been reached.
 function endCalcRangeRound() {
   currentStreak = 0;
   incorrectAnswersThisRound = 0;
@@ -364,6 +367,8 @@ function initializeTest() {
   generatePrompt();
 }
 
+// This function is called once the test is complete. This will either be when totalAnswers == triesUntilTestOver
+// or when other end conditions are met. See calculateRange for end conditions.
 function generateResults() {
   lowestIncorrectKanji = removeOutliers(incorrectAnswers);
   if (highestCorrectkanji < max) {
