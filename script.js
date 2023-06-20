@@ -347,6 +347,7 @@ function initializeTest() {
   });
   progressBar.style.width = "0%";
   window.scrollTo(0, 0);
+  resultsContainer.classList.add("hidden");
 
   // Initialize variables for new test
   highestCorrectkanji = 0;
